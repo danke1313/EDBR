@@ -1,1 +1,37 @@
+
+
+
+#MACHINE
 AddForgeItem "FORCEFIELD BARRIER, COVENANT" 82 objects\gear\atlas\covenant\forcefield_barrier\forcefield_barrier.device_machine
+AddForgeItem "Glass Door Split" 82 objects\levels\atlas\h100\glass_door_split\glass_door_split.device_machine
+AddForgeItem "Gate Secruity Small" 82 objects\levels\atlas\gate_security\gate_security_small\gate_security_small.device_machine
+AddForgeItem "Cache Door" 82 objects\levels\atlas\h100\evac_door\evac_door.device_machine
+AddForgeItem "Nav Barrier" 82 objects\levels\atlas\shared\hub_navigation_machines\hub_nav_jersey_barrier\hub_nav_jersey_barrier.device_machine
+
+
+
+
+#MISC
+AddForgeItem "Civ Car" 11 objects\gear\atlas\civilian\hu_civ_car_lite\hu_civ_car_lite.crate
+AddForgeItem "Destroyed Civ Car" 11 objects\gear\atlas\civilian\hu_civ_car\hu_civ_car_disabled\hu_civ_car_disabled.crate
+AddForgeItem "Covenant Space Crate" 11 objects\gear\covenant\military\crate_space_a\crate_space_a.crate
+AddForgeItem "Covenant Space Crate 2" 11 objects\gear\covenant\military\crate_space_a\crate_space_b.crate
+AddForgeItem "Covenant Baricade" 11 objects\gear\covenant\military\cov_barrier\cov_barrier.crate
+AddForgeItem "Semi Truck" 11 objects\vehicles\civilian\truck_cab_large\truck_cab_large.crate
+AddForgeItem "Semi Truck Bed" 11 objects\vehicles\civilian\truck_cab_large\bed_long\bed_long.crate
+AddForgeItem "Cargo Truck`" 11 objects\vehicles\civilian\cargo_truck\cargo_truck.crate
+AddForgeItem "Bench`" 11 objects\levels\atlas\h100\hub_bench_crate\garbage\hub_bench_crate.crate
+AddForgeItem "Dumpster Tall`" 11 objects\gear\atlas\civilian\dumpster_tall\dumpster_tall.crate
+AddForgeItem "Zoo Chair`" 11 objects\levels\atlas\shared\hub_furniture\chair_a\chair_a.crate
+AddForgeItem "Covenant Watch Tower`" 11 objects\gear\covenant\military\cov_watchtower\cov_watchtower_pod\cov_watchtower_pod_turrets.crate
+AddForgeItem "Covenant Watch Tower`" 11 objects\gear\covenant\military\cov_watchtower\cov_watchtower_base\cov_watchtower_base.device_machine
+AddForgeItem "Crate Gun Rack`" 11 objects\gear\human\military\crate_h_gun_rack_1\crate_h_gun_rack_1.crate
+AddForgeItem "Armory Shelf`" 11 objects\levels\solo\020_base\armory_shelf_small\armory_shelf_small.scenery
+AddForgeItem "Crate packing`" 11 objects\gear\human\military\crate_packing_giant\crate_packing_giant.crate
+AddForgeItem "Covenant Antennae`" 11 objects\gear\covenant\military\antennae_comm\antennae_comm.crate
+AddForgeItem "Scrap 1`" 11 objects\levels\atlas\tether_chunks\tether_scrap_d\tether_scrap_d.crate
+AddForgeItem "Scrap 2`" 11 objects\levels\atlas\tether_chunks\tether_scrap_d\tether_scrap_g.crate
+AddForgeItem "Scrap 3`" 11 objects\levels\atlas\tether_chunks\tether_scrap_d\tether_scrap_n.crate
+AddForgeItem "Scrap 4`" 11 objects\levels\atlas\tether_chunks\tether_scrap_d\tether_scrap_p.crate
+AddForgeItem "Medical Kiosk`" 11 objects\levels\atlas\shared\medical_kiosk_wall\medical_kiosk_wall.scenery
+AddForgeItem "Hub Statue`" 11 objects\levels\atlas\h100\statue_hub\statue_hub.scenery
