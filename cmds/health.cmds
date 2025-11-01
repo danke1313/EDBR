@@ -1,0 +1,1899 @@
+
+
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo Textures
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+duplicatetag ui\chud\bitmaps\shield_border.bitmap
+nametag * ui\chud\bitmaps\shield_border_new
+savetagnames
+
+edittag ui\chud\bitmaps\shield_border_new.bitm
+importbitmap 0 workingdir\bitmaps\health\shield_border_new.dds
+savetagchanges
+exit
+
+duplicatetag ui\chud\bitmaps\shield_meter.bitmap
+nametag * ui\chud\bitmaps\shield_meter_new
+savetagnames
+
+edittag ui\chud\bitmaps\shield_meter_new.bitm
+importbitmap 0 workingdir\bitmaps\health\shield_meter_new.dds
+savetagchanges
+exit
+
+duplicatetag ui\chud\bitmaps\shield_meter.bitmap
+nametag * ui\chud\bitmaps\health_meter
+savetagnames
+
+edittag ui\chud\bitmaps\health_meter.bitm
+importbitmap 0 workingdir\bitmaps\health\health_meter.dds
+savetagchanges
+exit
+
+duplicatetag ui\chud\bitmaps\shield_border.bitmap
+nametag * ui\chud\bitmaps\health_border
+savetagnames
+
+edittag ui\chud\bitmaps\health_border.bitm
+importbitmap 0 workingdir\bitmaps\health\health_border.dds
+savetagchanges
+exit
+
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo Edit shield (removes initial block, recreates and then moves to index 0
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+edittag ui\chud\spartan.chud_definition
+removeblockelements hudwidgets 0
+addblockelements hudwidgets 1 0
+editblock hudwidgets[0]
+
+
+SetField Name shield_meter
+SetField ScriptingClass Shield
+SetField BaseFlags None
+SetField SortLayer Parent
+AddBlockElements StateData 1
+SetField StateData[0].GameState None
+SetField StateData[0].SkinState None
+SetField StateData[0].GameTeam None
+SetField StateData[0].WindowState None
+SetField StateData[0].MultiplayerEvents None
+SetField StateData[0].UnitBaseFlags None
+SetField StateData[0].EditorFlags None
+SetField StateData[0].HindsightState None
+SetField StateData[0].SkullFlags None
+SetField StateData[0].SurvivalRoundFlags None
+SetField StateData[0].SurvivalWaveFlags None
+SetField StateData[0].SurvivalLivesFlags None
+SetField StateData[0].SurvivalDifficultyFlags None
+SetField StateData[0].Unused 0
+SetField StateData[0].GeneralKudosFlags None
+SetField StateData[0].UnitZoomFlags None
+SetField StateData[0].UnitInventoryFlags 0
+SetField StateData[0].Unused3 0
+SetField StateData[0].UnitGeneralFlags BinocularsNotActive,HasShields
+SetField StateData[0].Unused4 0
+SetField StateData[0].WeaponKudosFlags None
+SetField StateData[0].WeaponStatusFlags None
+SetField StateData[0].WeaponTargetFlags None
+SetField StateData[0].WeaponTargetBFlags None
+SetField StateData[0].Player_SpecialFlags None
+SetField StateData[0].Weapon_SpecialFlags None
+SetField StateData[0].InverseFlags NotZoomedIn
+SetField StateData[0].UnusedFlags4 0
+SetField StateData[0].ConsumableFlags None
+SetField StateData[0].EnergyMeterFlags None
+AddBlockElements PlacementData 1
+SetField PlacementData[0].Anchor TopCenter
+SetField PlacementData[0].AnchorFlags 0
+SetField PlacementData[0].Origin 0 -1
+SetField PlacementData[0].Offset 0 34
+SetField PlacementData[0].Scale 1.15 1.1
+SetField ParallaxData ui\chud\parallax\spartan.chud_widget_parallax_data
+AddBlockElements BitmapWidgets 12
+SetField BitmapWidgets[0].Name flahsy
+SetField BitmapWidgets[0].ScriptingClass UseParent
+SetField BitmapWidgets[0].BaseFlags None
+SetField BitmapWidgets[0].SortLayer Inherited
+AddBlockElements BitmapWidgets[0].StateData 1
+SetField BitmapWidgets[0].StateData[0].GameState None
+SetField BitmapWidgets[0].StateData[0].SkinState None
+SetField BitmapWidgets[0].StateData[0].GameTeam None
+SetField BitmapWidgets[0].StateData[0].WindowState WideFull, WideHalf, NativeFull, StandardFull, WideQuarter, StandardHalf, NativeQuarter
+SetField BitmapWidgets[0].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[0].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[0].StateData[0].EditorFlags None
+SetField BitmapWidgets[0].StateData[0].HindsightState None
+SetField BitmapWidgets[0].StateData[0].SkullFlags None
+SetField BitmapWidgets[0].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[0].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[0].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[0].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[0].StateData[0].Unused 0
+SetField BitmapWidgets[0].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[0].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[0].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[0].StateData[0].Unused3 0
+SetField BitmapWidgets[0].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[0].StateData[0].Unused4 0
+SetField BitmapWidgets[0].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[0].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[0].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[0].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[0].StateData[0].Player_SpecialFlags ShieldsHeavyDamage
+SetField BitmapWidgets[0].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[0].StateData[0].InverseFlags None
+SetField BitmapWidgets[0].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[0].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[0].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[0].PlacementData 1
+SetField BitmapWidgets[0].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[0].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[0].PlacementData[0].Origin 1 0
+SetField BitmapWidgets[0].PlacementData[0].Offset 0 -69
+SetField BitmapWidgets[0].PlacementData[0].Scale 1.01 1
+AddBlockElements BitmapWidgets[0].AnimationData 1
+SetField BitmapWidgets[0].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Initializing.Animation null
+SetField BitmapWidgets[0].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Active.Animation ui\chud\animations\invisible.chud_animation_definition
+SetField BitmapWidgets[0].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[0].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[0].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[0].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[0].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[0].RenderData 1
+SetField BitmapWidgets[0].RenderData[0].ShaderType Meter
+SetField BitmapWidgets[0].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[0].RenderData[0].ExternalInput ShieldAmount
+SetField BitmapWidgets[0].RenderData[0].RangeInput Zero
+SetField BitmapWidgets[0].RenderData[0].LocalColorA 0 255 17 17
+SetField BitmapWidgets[0].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[0].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[0].RenderData[0].LocalColorD 0 0 0 0
+SetField BitmapWidgets[0].RenderData[0].LocalScalarA 1
+SetField BitmapWidgets[0].RenderData[0].LocalScalarB 0.1
+SetField BitmapWidgets[0].RenderData[0].LocalScalarC 0
+SetField BitmapWidgets[0].RenderData[0].LocalScalarD 0
+SetField BitmapWidgets[0].RenderData[0].OutputColorA LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorB LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorC LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorD LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorE LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[0].RenderData[0].OutputScalarB FlashAnimation
+SetField BitmapWidgets[0].RenderData[0].OutputScalarC LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[0].RenderData[0].OutputScalarE Input
+SetField BitmapWidgets[0].RenderData[0].OutputScalarF Input
+SetField BitmapWidgets[0].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[0].RuntimeWidgetIndex 0
+SetField BitmapWidgets[0].Flags MirrorHorizontally,Stretch
+SetField BitmapWidgets[0].Bitmap ui\chud\bitmaps\shield_flash_bleed.bitmap
+SetField BitmapWidgets[0].BitmapSequenceIndex 0
+SetField BitmapWidgets[0].Padding2 null
+SetField BitmapWidgets[1].Name border
+SetField BitmapWidgets[1].ScriptingClass UseParent
+SetField BitmapWidgets[1].BaseFlags None
+SetField BitmapWidgets[1].SortLayer Inherited
+AddBlockElements BitmapWidgets[1].StateData 1
+SetField BitmapWidgets[1].StateData[0].GameState None
+SetField BitmapWidgets[1].StateData[0].SkinState None
+SetField BitmapWidgets[1].StateData[0].GameTeam None
+SetField BitmapWidgets[1].StateData[0].WindowState WideFull, WideHalf, NativeFull, StandardFull, WideQuarter, StandardHalf, NativeQuarter
+SetField BitmapWidgets[1].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[1].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[1].StateData[0].EditorFlags None
+SetField BitmapWidgets[1].StateData[0].HindsightState None
+SetField BitmapWidgets[1].StateData[0].SkullFlags None
+SetField BitmapWidgets[1].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[1].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[1].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[1].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[1].StateData[0].Unused 0
+SetField BitmapWidgets[1].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[1].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[1].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[1].StateData[0].Unused3 0
+SetField BitmapWidgets[1].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[1].StateData[0].Unused4 0
+SetField BitmapWidgets[1].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[1].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[1].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[1].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[1].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[1].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[1].StateData[0].InverseFlags None
+SetField BitmapWidgets[1].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[1].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[1].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[1].PlacementData 1
+SetField BitmapWidgets[1].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[1].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[1].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[1].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[1].PlacementData[0].Scale 1 1
+AddBlockElements BitmapWidgets[1].AnimationData 1
+SetField BitmapWidgets[1].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Initializing.Animation ui\chud\animations\shield_color.chud_animation_definition
+SetField BitmapWidgets[1].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[1].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[1].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[1].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[1].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[1].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[1].RenderData 1
+SetField BitmapWidgets[1].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[1].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[1].RenderData[0].ExternalInput Zero
+SetField BitmapWidgets[1].RenderData[0].RangeInput ShieldRecentDamage
+SetField BitmapWidgets[1].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[1].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[1].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[1].RenderData[0].LocalColorD 0 0 0 0
+SetField BitmapWidgets[1].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[1].RenderData[0].LocalScalarB 1
+SetField BitmapWidgets[1].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[1].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[1].RenderData[0].OutputColorA HighlightForeground
+SetField BitmapWidgets[1].RenderData[0].OutputColorB HighlightForeground
+SetField BitmapWidgets[1].RenderData[0].OutputColorC HighlightForeground
+SetField BitmapWidgets[1].RenderData[0].OutputColorD HighlightForeground
+SetField BitmapWidgets[1].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[1].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[1].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[1].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[1].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[1].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[1].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[1].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[1].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[1].RuntimeWidgetIndex 1
+SetField BitmapWidgets[1].Flags Stretch
+SetField BitmapWidgets[1].Bitmap ui\chud\bitmaps\shield_border_new.bitmap
+SetField BitmapWidgets[1].BitmapSequenceIndex 0
+SetField BitmapWidgets[1].Padding2 null
+SetField BitmapWidgets[2].Name meter
+SetField BitmapWidgets[2].ScriptingClass UseParent
+SetField BitmapWidgets[2].BaseFlags None
+SetField BitmapWidgets[2].SortLayer Background
+AddBlockElements BitmapWidgets[2].StateData 1
+SetField BitmapWidgets[2].StateData[0].GameState None
+SetField BitmapWidgets[2].StateData[0].SkinState None
+SetField BitmapWidgets[2].StateData[0].GameTeam None
+SetField BitmapWidgets[2].StateData[0].WindowState WideFull, WideHalf, NativeFull, StandardFull, WideQuarter, StandardHalf, NativeQuarter
+SetField BitmapWidgets[2].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[2].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[2].StateData[0].EditorFlags None
+SetField BitmapWidgets[2].StateData[0].HindsightState None
+SetField BitmapWidgets[2].StateData[0].SkullFlags None
+SetField BitmapWidgets[2].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[2].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[2].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[2].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[2].StateData[0].Unused 0
+SetField BitmapWidgets[2].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[2].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[2].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[2].StateData[0].Unused3 0
+SetField BitmapWidgets[2].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[2].StateData[0].Unused4 0
+SetField BitmapWidgets[2].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[2].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[2].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[2].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[2].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[2].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[2].StateData[0].InverseFlags None
+SetField BitmapWidgets[2].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[2].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[2].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[2].PlacementData 1
+SetField BitmapWidgets[2].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[2].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[2].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[2].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[2].PlacementData[0].Scale 1 1
+AddBlockElements BitmapWidgets[2].AnimationData 1
+SetField BitmapWidgets[2].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Initializing.Animation ui\chud\animations\shield_color.chud_animation_definition
+SetField BitmapWidgets[2].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[2].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[2].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[2].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[2].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[2].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[2].RenderData 1
+SetField BitmapWidgets[2].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[2].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[2].RenderData[0].ExternalInput ShieldAmount
+SetField BitmapWidgets[2].RenderData[0].RangeInput ShieldRecentDamage
+SetField BitmapWidgets[2].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[2].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[2].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[2].RenderData[0].LocalColorD 1 255 255 255
+SetField BitmapWidgets[2].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[2].RenderData[0].LocalScalarB 0.2
+SetField BitmapWidgets[2].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[2].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[2].RenderData[0].OutputColorA SecondaryBackground
+SetField BitmapWidgets[2].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[2].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[2].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[2].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[2].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[2].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[2].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[2].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[2].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[2].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[2].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[2].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[2].RuntimeWidgetIndex 2
+SetField BitmapWidgets[2].Flags Stretch
+SetField BitmapWidgets[2].Bitmap ui\chud\bitmaps\shield_meter_new.bitmap
+SetField BitmapWidgets[2].BitmapSequenceIndex 0
+SetField BitmapWidgets[2].Padding2 null
+SetField BitmapWidgets[3].Name meter_sup2
+SetField BitmapWidgets[3].ScriptingClass UseParent
+SetField BitmapWidgets[3].BaseFlags None
+SetField BitmapWidgets[3].SortLayer Inherited
+AddBlockElements BitmapWidgets[3].StateData 1
+SetField BitmapWidgets[3].StateData[0].GameState None
+SetField BitmapWidgets[3].StateData[0].SkinState None
+SetField BitmapWidgets[3].StateData[0].GameTeam None
+SetField BitmapWidgets[3].StateData[0].WindowState WideFull, WideHalf, NativeFull, StandardFull, WideQuarter, StandardHalf, NativeQuarter
+SetField BitmapWidgets[3].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[3].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[3].StateData[0].EditorFlags None
+SetField BitmapWidgets[3].StateData[0].HindsightState None
+SetField BitmapWidgets[3].StateData[0].SkullFlags None
+SetField BitmapWidgets[3].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[3].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[3].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[3].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[3].StateData[0].Unused 0
+SetField BitmapWidgets[3].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[3].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[3].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[3].StateData[0].Unused3 0
+SetField BitmapWidgets[3].StateData[0].UnitGeneralFlags HasOvershieldLevel1
+SetField BitmapWidgets[3].StateData[0].Unused4 0
+SetField BitmapWidgets[3].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[3].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[3].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[3].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[3].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[3].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[3].StateData[0].InverseFlags None
+SetField BitmapWidgets[3].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[3].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[3].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[3].PlacementData 1
+SetField BitmapWidgets[3].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[3].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[3].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[3].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[3].PlacementData[0].Scale 1 1
+AddBlockElements BitmapWidgets[3].AnimationData 1
+SetField BitmapWidgets[3].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Initializing.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[3].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[3].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[3].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[3].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[3].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[3].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[3].RenderData 1
+SetField BitmapWidgets[3].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[3].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[3].RenderData[0].ExternalInput Unit1xOvershieldCurrent
+SetField BitmapWidgets[3].RenderData[0].RangeInput Unit1xOvershieldRecentDmg
+SetField BitmapWidgets[3].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[3].RenderData[0].LocalColorB 0 3 56 3
+SetField BitmapWidgets[3].RenderData[0].LocalColorC 0 0 255 0
+SetField BitmapWidgets[3].RenderData[0].LocalColorD 1 255 255 255
+SetField BitmapWidgets[3].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[3].RenderData[0].LocalScalarB 0
+SetField BitmapWidgets[3].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[3].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[3].RenderData[0].OutputColorA LocalC
+SetField BitmapWidgets[3].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[3].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[3].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[3].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[3].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[3].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[3].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[3].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[3].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[3].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[3].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[3].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[3].RuntimeWidgetIndex 3
+SetField BitmapWidgets[3].Flags Stretch
+SetField BitmapWidgets[3].Bitmap ui\chud\bitmaps\shield_meter_new.bitmap
+SetField BitmapWidgets[3].BitmapSequenceIndex 0
+SetField BitmapWidgets[3].Padding2 null
+SetField BitmapWidgets[4].Name meter_sup3
+SetField BitmapWidgets[4].ScriptingClass UseParent
+SetField BitmapWidgets[4].BaseFlags None
+SetField BitmapWidgets[4].SortLayer Middle
+AddBlockElements BitmapWidgets[4].StateData 1
+SetField BitmapWidgets[4].StateData[0].GameState None
+SetField BitmapWidgets[4].StateData[0].SkinState None
+SetField BitmapWidgets[4].StateData[0].GameTeam None
+SetField BitmapWidgets[4].StateData[0].WindowState WideFull, WideHalf, NativeFull, StandardFull, WideQuarter, StandardHalf, NativeQuarter
+SetField BitmapWidgets[4].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[4].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[4].StateData[0].EditorFlags None
+SetField BitmapWidgets[4].StateData[0].HindsightState None
+SetField BitmapWidgets[4].StateData[0].SkullFlags None
+SetField BitmapWidgets[4].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[4].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[4].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[4].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[4].StateData[0].Unused 0
+SetField BitmapWidgets[4].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[4].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[4].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[4].StateData[0].Unused3 0
+SetField BitmapWidgets[4].StateData[0].UnitGeneralFlags HasOvershieldLevel2
+SetField BitmapWidgets[4].StateData[0].Unused4 0
+SetField BitmapWidgets[4].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[4].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[4].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[4].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[4].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[4].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[4].StateData[0].InverseFlags None
+SetField BitmapWidgets[4].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[4].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[4].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[4].PlacementData 1
+SetField BitmapWidgets[4].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[4].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[4].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[4].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[4].PlacementData[0].Scale 1 1
+AddBlockElements BitmapWidgets[4].AnimationData 1
+SetField BitmapWidgets[4].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Initializing.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[4].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[4].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[4].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[4].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[4].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[4].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[4].RenderData 1
+SetField BitmapWidgets[4].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[4].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[4].RenderData[0].ExternalInput Unit2xOvershieldCurrent
+SetField BitmapWidgets[4].RenderData[0].RangeInput Unit2xOvershieldRecentDmg
+SetField BitmapWidgets[4].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[4].RenderData[0].LocalColorB 0 57 40 3
+SetField BitmapWidgets[4].RenderData[0].LocalColorC 0 255 174 0
+SetField BitmapWidgets[4].RenderData[0].LocalColorD 1 255 255 255
+SetField BitmapWidgets[4].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[4].RenderData[0].LocalScalarB 0
+SetField BitmapWidgets[4].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[4].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[4].RenderData[0].OutputColorA LocalC
+SetField BitmapWidgets[4].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[4].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[4].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[4].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[4].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[4].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[4].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[4].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[4].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[4].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[4].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[4].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[4].RuntimeWidgetIndex 4
+SetField BitmapWidgets[4].Flags Stretch
+SetField BitmapWidgets[4].Bitmap ui\chud\bitmaps\shield_meter_new.bitmap
+SetField BitmapWidgets[4].BitmapSequenceIndex 0
+SetField BitmapWidgets[4].Padding2 null
+SetField BitmapWidgets[5].Name meter_sup4
+SetField BitmapWidgets[5].ScriptingClass UseParent
+SetField BitmapWidgets[5].BaseFlags None
+SetField BitmapWidgets[5].SortLayer Foreground
+AddBlockElements BitmapWidgets[5].StateData 1
+SetField BitmapWidgets[5].StateData[0].GameState None
+SetField BitmapWidgets[5].StateData[0].SkinState None
+SetField BitmapWidgets[5].StateData[0].GameTeam None
+SetField BitmapWidgets[5].StateData[0].WindowState WideFull, WideHalf, NativeFull, StandardFull, WideQuarter, StandardHalf, NativeQuarter
+SetField BitmapWidgets[5].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[5].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[5].StateData[0].EditorFlags None
+SetField BitmapWidgets[5].StateData[0].HindsightState None
+SetField BitmapWidgets[5].StateData[0].SkullFlags None
+SetField BitmapWidgets[5].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[5].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[5].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[5].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[5].StateData[0].Unused 0
+SetField BitmapWidgets[5].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[5].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[5].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[5].StateData[0].Unused3 0
+SetField BitmapWidgets[5].StateData[0].UnitGeneralFlags HasOvershieldLevel3
+SetField BitmapWidgets[5].StateData[0].Unused4 0
+SetField BitmapWidgets[5].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[5].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[5].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[5].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[5].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[5].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[5].StateData[0].InverseFlags None
+SetField BitmapWidgets[5].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[5].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[5].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[5].PlacementData 1
+SetField BitmapWidgets[5].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[5].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[5].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[5].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[5].PlacementData[0].Scale 1 1
+AddBlockElements BitmapWidgets[5].AnimationData 1
+SetField BitmapWidgets[5].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Initializing.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[5].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[5].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[5].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[5].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[5].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[5].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[5].RenderData 1
+SetField BitmapWidgets[5].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[5].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[5].RenderData[0].ExternalInput Unit3xOvershieldCurrent
+SetField BitmapWidgets[5].RenderData[0].RangeInput Unit3xOvershieldRecentDmg
+SetField BitmapWidgets[5].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[5].RenderData[0].LocalColorB 0 49 3 55
+SetField BitmapWidgets[5].RenderData[0].LocalColorC 0 228 0 255
+SetField BitmapWidgets[5].RenderData[0].LocalColorD 1 255 255 255
+SetField BitmapWidgets[5].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[5].RenderData[0].LocalScalarB 0
+SetField BitmapWidgets[5].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[5].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[5].RenderData[0].OutputColorA LocalC
+SetField BitmapWidgets[5].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[5].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[5].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[5].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[5].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[5].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[5].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[5].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[5].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[5].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[5].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[5].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[5].RuntimeWidgetIndex 5
+SetField BitmapWidgets[5].Flags Stretch
+SetField BitmapWidgets[5].Bitmap ui\chud\bitmaps\shield_meter_new.bitmap
+SetField BitmapWidgets[5].BitmapSequenceIndex 0
+SetField BitmapWidgets[5].Padding2 null
+SetField BitmapWidgets[6].Name meter_small
+SetField BitmapWidgets[6].ScriptingClass UseParent
+SetField BitmapWidgets[6].BaseFlags None
+SetField BitmapWidgets[6].SortLayer Background
+AddBlockElements BitmapWidgets[6].StateData 1
+SetField BitmapWidgets[6].StateData[0].GameState None
+SetField BitmapWidgets[6].StateData[0].SkinState None
+SetField BitmapWidgets[6].StateData[0].GameTeam None
+SetField BitmapWidgets[6].StateData[0].WindowState StandardQuarter
+SetField BitmapWidgets[6].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[6].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[6].StateData[0].EditorFlags None
+SetField BitmapWidgets[6].StateData[0].HindsightState None
+SetField BitmapWidgets[6].StateData[0].SkullFlags None
+SetField BitmapWidgets[6].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[6].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[6].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[6].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[6].StateData[0].Unused 0
+SetField BitmapWidgets[6].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[6].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[6].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[6].StateData[0].Unused3 0
+SetField BitmapWidgets[6].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[6].StateData[0].Unused4 0
+SetField BitmapWidgets[6].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[6].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[6].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[6].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[6].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[6].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[6].StateData[0].InverseFlags None
+SetField BitmapWidgets[6].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[6].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[6].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[6].PlacementData 1
+SetField BitmapWidgets[6].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[6].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[6].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[6].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[6].PlacementData[0].Scale 0.75 0.8
+AddBlockElements BitmapWidgets[6].AnimationData 1
+SetField BitmapWidgets[6].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[6].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[6].AnimationData[0].Initializing.Animation ui\chud\animations\shield_color.chud_animation_definition
+SetField BitmapWidgets[6].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[6].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[6].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[6].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[6].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[6].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[6].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[6].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[6].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[6].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[6].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[6].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[6].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[6].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[6].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[6].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[6].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[6].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[6].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[6].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[6].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[6].RenderData 1
+SetField BitmapWidgets[6].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[6].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[6].RenderData[0].ExternalInput ShieldAmount
+SetField BitmapWidgets[6].RenderData[0].RangeInput ShieldRecentDamage
+SetField BitmapWidgets[6].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[6].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[6].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[6].RenderData[0].LocalColorD 1 255 255 255
+SetField BitmapWidgets[6].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[6].RenderData[0].LocalScalarB 0.2
+SetField BitmapWidgets[6].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[6].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[6].RenderData[0].OutputColorA SecondaryBackground
+SetField BitmapWidgets[6].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[6].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[6].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[6].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[6].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[6].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[6].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[6].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[6].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[6].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[6].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[6].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[6].RuntimeWidgetIndex 6
+SetField BitmapWidgets[6].Flags None
+SetField BitmapWidgets[6].Bitmap ui\chud\bitmaps\shield_meter_small.bitmap
+SetField BitmapWidgets[6].BitmapSequenceIndex 0
+SetField BitmapWidgets[6].Padding2 null
+SetField BitmapWidgets[7].Name border_small
+SetField BitmapWidgets[7].ScriptingClass UseParent
+SetField BitmapWidgets[7].BaseFlags None
+SetField BitmapWidgets[7].SortLayer Inherited
+AddBlockElements BitmapWidgets[7].StateData 1
+SetField BitmapWidgets[7].StateData[0].GameState None
+SetField BitmapWidgets[7].StateData[0].SkinState None
+SetField BitmapWidgets[7].StateData[0].GameTeam None
+SetField BitmapWidgets[7].StateData[0].WindowState StandardQuarter
+SetField BitmapWidgets[7].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[7].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[7].StateData[0].EditorFlags None
+SetField BitmapWidgets[7].StateData[0].HindsightState None
+SetField BitmapWidgets[7].StateData[0].SkullFlags None
+SetField BitmapWidgets[7].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[7].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[7].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[7].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[7].StateData[0].Unused 0
+SetField BitmapWidgets[7].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[7].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[7].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[7].StateData[0].Unused3 0
+SetField BitmapWidgets[7].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[7].StateData[0].Unused4 0
+SetField BitmapWidgets[7].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[7].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[7].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[7].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[7].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[7].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[7].StateData[0].InverseFlags None
+SetField BitmapWidgets[7].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[7].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[7].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[7].PlacementData 1
+SetField BitmapWidgets[7].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[7].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[7].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[7].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[7].PlacementData[0].Scale 0.75 0.8
+AddBlockElements BitmapWidgets[7].AnimationData 1
+SetField BitmapWidgets[7].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[7].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[7].AnimationData[0].Initializing.Animation ui\chud\animations\shield_color.chud_animation_definition
+SetField BitmapWidgets[7].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[7].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[7].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[7].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[7].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[7].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[7].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[7].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[7].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[7].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[7].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[7].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[7].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[7].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[7].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[7].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[7].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[7].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[7].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[7].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[7].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[7].RenderData 1
+SetField BitmapWidgets[7].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[7].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[7].RenderData[0].ExternalInput Zero
+SetField BitmapWidgets[7].RenderData[0].RangeInput ShieldRecentDamage
+SetField BitmapWidgets[7].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[7].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[7].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[7].RenderData[0].LocalColorD 0 0 0 0
+SetField BitmapWidgets[7].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[7].RenderData[0].LocalScalarB 1
+SetField BitmapWidgets[7].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[7].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[7].RenderData[0].OutputColorA HighlightForeground
+SetField BitmapWidgets[7].RenderData[0].OutputColorB HighlightForeground
+SetField BitmapWidgets[7].RenderData[0].OutputColorC HighlightForeground
+SetField BitmapWidgets[7].RenderData[0].OutputColorD HighlightForeground
+SetField BitmapWidgets[7].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[7].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[7].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[7].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[7].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[7].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[7].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[7].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[7].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[7].RuntimeWidgetIndex 7
+SetField BitmapWidgets[7].Flags None
+SetField BitmapWidgets[7].Bitmap ui\chud\bitmaps\shield_border_new.bitmap
+SetField BitmapWidgets[7].BitmapSequenceIndex 0
+SetField BitmapWidgets[7].Padding2 null
+SetField BitmapWidgets[8].Name meter_sup2_small
+SetField BitmapWidgets[8].ScriptingClass UseParent
+SetField BitmapWidgets[8].BaseFlags None
+SetField BitmapWidgets[8].SortLayer Inherited
+AddBlockElements BitmapWidgets[8].StateData 1
+SetField BitmapWidgets[8].StateData[0].GameState None
+SetField BitmapWidgets[8].StateData[0].SkinState None
+SetField BitmapWidgets[8].StateData[0].GameTeam None
+SetField BitmapWidgets[8].StateData[0].WindowState StandardQuarter
+SetField BitmapWidgets[8].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[8].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[8].StateData[0].EditorFlags None
+SetField BitmapWidgets[8].StateData[0].HindsightState None
+SetField BitmapWidgets[8].StateData[0].SkullFlags None
+SetField BitmapWidgets[8].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[8].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[8].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[8].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[8].StateData[0].Unused 0
+SetField BitmapWidgets[8].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[8].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[8].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[8].StateData[0].Unused3 0
+SetField BitmapWidgets[8].StateData[0].UnitGeneralFlags HasOvershieldLevel1
+SetField BitmapWidgets[8].StateData[0].Unused4 0
+SetField BitmapWidgets[8].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[8].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[8].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[8].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[8].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[8].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[8].StateData[0].InverseFlags None
+SetField BitmapWidgets[8].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[8].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[8].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[8].PlacementData 1
+SetField BitmapWidgets[8].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[8].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[8].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[8].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[8].PlacementData[0].Scale 0.75 0.8
+AddBlockElements BitmapWidgets[8].AnimationData 1
+SetField BitmapWidgets[8].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[8].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[8].AnimationData[0].Initializing.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[8].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[8].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[8].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[8].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[8].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[8].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[8].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[8].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[8].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[8].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[8].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[8].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[8].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[8].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[8].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[8].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[8].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[8].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[8].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[8].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[8].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[8].RenderData 1
+SetField BitmapWidgets[8].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[8].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[8].RenderData[0].ExternalInput Unit1xOvershieldCurrent
+SetField BitmapWidgets[8].RenderData[0].RangeInput Unit1xOvershieldRecentDmg
+SetField BitmapWidgets[8].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[8].RenderData[0].LocalColorB 0 3 56 3
+SetField BitmapWidgets[8].RenderData[0].LocalColorC 0 0 255 0
+SetField BitmapWidgets[8].RenderData[0].LocalColorD 1 255 255 255
+SetField BitmapWidgets[8].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[8].RenderData[0].LocalScalarB 0
+SetField BitmapWidgets[8].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[8].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[8].RenderData[0].OutputColorA LocalC
+SetField BitmapWidgets[8].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[8].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[8].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[8].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[8].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[8].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[8].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[8].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[8].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[8].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[8].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[8].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[8].RuntimeWidgetIndex 8
+SetField BitmapWidgets[8].Flags None
+SetField BitmapWidgets[8].Bitmap ui\chud\bitmaps\shield_meter_new.bitmap
+SetField BitmapWidgets[8].BitmapSequenceIndex 0
+SetField BitmapWidgets[8].Padding2 null
+SetField BitmapWidgets[9].Name flahsy_small
+SetField BitmapWidgets[9].ScriptingClass UseParent
+SetField BitmapWidgets[9].BaseFlags None
+SetField BitmapWidgets[9].SortLayer Inherited
+AddBlockElements BitmapWidgets[9].StateData 1
+SetField BitmapWidgets[9].StateData[0].GameState None
+SetField BitmapWidgets[9].StateData[0].SkinState None
+SetField BitmapWidgets[9].StateData[0].GameTeam None
+SetField BitmapWidgets[9].StateData[0].WindowState StandardQuarter
+SetField BitmapWidgets[9].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[9].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[9].StateData[0].EditorFlags None
+SetField BitmapWidgets[9].StateData[0].HindsightState None
+SetField BitmapWidgets[9].StateData[0].SkullFlags None
+SetField BitmapWidgets[9].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[9].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[9].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[9].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[9].StateData[0].Unused 0
+SetField BitmapWidgets[9].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[9].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[9].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[9].StateData[0].Unused3 0
+SetField BitmapWidgets[9].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[9].StateData[0].Unused4 0
+SetField BitmapWidgets[9].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[9].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[9].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[9].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[9].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[9].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[9].StateData[0].InverseFlags None
+SetField BitmapWidgets[9].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[9].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[9].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[9].PlacementData 1
+SetField BitmapWidgets[9].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[9].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[9].PlacementData[0].Origin 1.02 0
+SetField BitmapWidgets[9].PlacementData[0].Offset 0 -15
+SetField BitmapWidgets[9].PlacementData[0].Scale 1.45 0.8
+AddBlockElements BitmapWidgets[9].AnimationData 1
+SetField BitmapWidgets[9].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[9].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[9].AnimationData[0].Initializing.Animation null
+SetField BitmapWidgets[9].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[9].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[9].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[9].AnimationData[0].Active.Animation ui\chud\animations\invisible.chud_animation_definition
+SetField BitmapWidgets[9].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[9].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[9].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[9].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[9].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[9].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[9].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[9].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[9].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[9].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[9].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[9].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[9].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[9].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[9].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[9].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[9].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[9].RenderData 1
+SetField BitmapWidgets[9].RenderData[0].ShaderType Meter
+SetField BitmapWidgets[9].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[9].RenderData[0].ExternalInput ShieldAmount
+SetField BitmapWidgets[9].RenderData[0].RangeInput Zero
+SetField BitmapWidgets[9].RenderData[0].LocalColorA 0 255 17 17
+SetField BitmapWidgets[9].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[9].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[9].RenderData[0].LocalColorD 0 0 0 0
+SetField BitmapWidgets[9].RenderData[0].LocalScalarA 1
+SetField BitmapWidgets[9].RenderData[0].LocalScalarB 0.1
+SetField BitmapWidgets[9].RenderData[0].LocalScalarC 0
+SetField BitmapWidgets[9].RenderData[0].LocalScalarD 0
+SetField BitmapWidgets[9].RenderData[0].OutputColorA LocalA
+SetField BitmapWidgets[9].RenderData[0].OutputColorB LocalA
+SetField BitmapWidgets[9].RenderData[0].OutputColorC LocalA
+SetField BitmapWidgets[9].RenderData[0].OutputColorD LocalA
+SetField BitmapWidgets[9].RenderData[0].OutputColorE LocalA
+SetField BitmapWidgets[9].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[9].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[9].RenderData[0].OutputScalarB FlashAnimation
+SetField BitmapWidgets[9].RenderData[0].OutputScalarC LocalA
+SetField BitmapWidgets[9].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[9].RenderData[0].OutputScalarE Input
+SetField BitmapWidgets[9].RenderData[0].OutputScalarF Input
+SetField BitmapWidgets[9].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[9].RuntimeWidgetIndex 9
+SetField BitmapWidgets[9].Flags MirrorHorizontally
+SetField BitmapWidgets[9].Bitmap ui\chud\bitmaps\shield_flash_bleed.bitmap
+SetField BitmapWidgets[9].BitmapSequenceIndex 0
+SetField BitmapWidgets[9].Padding2 null
+SetField BitmapWidgets[10].Name meter_sup3_small
+SetField BitmapWidgets[10].ScriptingClass UseParent
+SetField BitmapWidgets[10].BaseFlags None
+SetField BitmapWidgets[10].SortLayer Middle
+AddBlockElements BitmapWidgets[10].StateData 1
+SetField BitmapWidgets[10].StateData[0].GameState None
+SetField BitmapWidgets[10].StateData[0].SkinState None
+SetField BitmapWidgets[10].StateData[0].GameTeam None
+SetField BitmapWidgets[10].StateData[0].WindowState StandardQuarter
+SetField BitmapWidgets[10].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[10].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[10].StateData[0].EditorFlags None
+SetField BitmapWidgets[10].StateData[0].HindsightState None
+SetField BitmapWidgets[10].StateData[0].SkullFlags None
+SetField BitmapWidgets[10].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[10].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[10].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[10].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[10].StateData[0].Unused 0
+SetField BitmapWidgets[10].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[10].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[10].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[10].StateData[0].Unused3 0
+SetField BitmapWidgets[10].StateData[0].UnitGeneralFlags HasOvershieldLevel2
+SetField BitmapWidgets[10].StateData[0].Unused4 0
+SetField BitmapWidgets[10].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[10].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[10].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[10].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[10].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[10].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[10].StateData[0].InverseFlags None
+SetField BitmapWidgets[10].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[10].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[10].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[10].PlacementData 1
+SetField BitmapWidgets[10].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[10].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[10].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[10].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[10].PlacementData[0].Scale 0.75 0.8
+AddBlockElements BitmapWidgets[10].AnimationData 1
+SetField BitmapWidgets[10].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[10].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[10].AnimationData[0].Initializing.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[10].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[10].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[10].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[10].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[10].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[10].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[10].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[10].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[10].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[10].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[10].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[10].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[10].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[10].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[10].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[10].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[10].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[10].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[10].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[10].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[10].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[10].RenderData 1
+SetField BitmapWidgets[10].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[10].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[10].RenderData[0].ExternalInput Unit2xOvershieldCurrent
+SetField BitmapWidgets[10].RenderData[0].RangeInput Unit2xOvershieldRecentDmg
+SetField BitmapWidgets[10].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[10].RenderData[0].LocalColorB 0 57 40 3
+SetField BitmapWidgets[10].RenderData[0].LocalColorC 0 255 174 0
+SetField BitmapWidgets[10].RenderData[0].LocalColorD 1 255 255 255
+SetField BitmapWidgets[10].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[10].RenderData[0].LocalScalarB 0
+SetField BitmapWidgets[10].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[10].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[10].RenderData[0].OutputColorA LocalC
+SetField BitmapWidgets[10].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[10].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[10].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[10].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[10].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[10].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[10].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[10].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[10].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[10].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[10].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[10].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[10].RuntimeWidgetIndex 10
+SetField BitmapWidgets[10].Flags None
+SetField BitmapWidgets[10].Bitmap ui\chud\bitmaps\shield_meter_new.bitmap
+SetField BitmapWidgets[10].BitmapSequenceIndex 0
+SetField BitmapWidgets[10].Padding2 null
+SetField BitmapWidgets[11].Name meter_sup4_small
+SetField BitmapWidgets[11].ScriptingClass UseParent
+SetField BitmapWidgets[11].BaseFlags None
+SetField BitmapWidgets[11].SortLayer Foreground
+AddBlockElements BitmapWidgets[11].StateData 1
+SetField BitmapWidgets[11].StateData[0].GameState None
+SetField BitmapWidgets[11].StateData[0].SkinState None
+SetField BitmapWidgets[11].StateData[0].GameTeam None
+SetField BitmapWidgets[11].StateData[0].WindowState StandardQuarter
+SetField BitmapWidgets[11].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[11].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[11].StateData[0].EditorFlags None
+SetField BitmapWidgets[11].StateData[0].HindsightState None
+SetField BitmapWidgets[11].StateData[0].SkullFlags None
+SetField BitmapWidgets[11].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[11].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[11].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[11].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[11].StateData[0].Unused 0
+SetField BitmapWidgets[11].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[11].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[11].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[11].StateData[0].Unused3 0
+SetField BitmapWidgets[11].StateData[0].UnitGeneralFlags HasOvershieldLevel3
+SetField BitmapWidgets[11].StateData[0].Unused4 0
+SetField BitmapWidgets[11].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[11].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[11].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[11].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[11].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[11].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[11].StateData[0].InverseFlags None
+SetField BitmapWidgets[11].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[11].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[11].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[11].PlacementData 1
+SetField BitmapWidgets[11].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[11].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[11].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[11].PlacementData[0].Offset 0 -4
+SetField BitmapWidgets[11].PlacementData[0].Scale 0.75 0.8
+AddBlockElements BitmapWidgets[11].AnimationData 1
+SetField BitmapWidgets[11].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[11].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[11].AnimationData[0].Initializing.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[11].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[11].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[11].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[11].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[11].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[11].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[11].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[11].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[11].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[11].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[11].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[11].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[11].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[11].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[11].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[11].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[11].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[11].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[11].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[11].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[11].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[11].RenderData 1
+SetField BitmapWidgets[11].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[11].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[11].RenderData[0].ExternalInput Unit3xOvershieldCurrent
+SetField BitmapWidgets[11].RenderData[0].RangeInput Unit3xOvershieldRecentDmg
+SetField BitmapWidgets[11].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[11].RenderData[0].LocalColorB 0 49 3 55
+SetField BitmapWidgets[11].RenderData[0].LocalColorC 0 228 0 255
+SetField BitmapWidgets[11].RenderData[0].LocalColorD 1 255 255 255
+SetField BitmapWidgets[11].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[11].RenderData[0].LocalScalarB 0
+SetField BitmapWidgets[11].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[11].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[11].RenderData[0].OutputColorA LocalC
+SetField BitmapWidgets[11].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[11].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[11].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[11].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[11].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[11].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[11].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[11].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[11].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[11].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[11].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[11].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[11].RuntimeWidgetIndex 11
+SetField BitmapWidgets[11].Flags None
+SetField BitmapWidgets[11].Bitmap ui\chud\bitmaps\shield_meter_new.bitmap
+SetField BitmapWidgets[11].BitmapSequenceIndex 0
+SetField BitmapWidgets[11].Padding2 null
+savetagchanges
+exit
+exit
+
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+echo Add Health
+echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+edittag ui\chud\spartan.chud_definition
+addblockelements hudwidgets 1
+editblock hudwidgets[*]
+
+SetField Name health
+SetField ScriptingClass Shield
+SetField BaseFlags None
+SetField SortLayer Parent
+AddBlockElements StateData 1
+SetField StateData[0].GameState None
+SetField StateData[0].SkinState None
+SetField StateData[0].GameTeam None
+SetField StateData[0].WindowState None
+SetField StateData[0].MultiplayerEvents None
+SetField StateData[0].UnitBaseFlags None
+SetField StateData[0].EditorFlags None
+SetField StateData[0].HindsightState None
+SetField StateData[0].SkullFlags None
+SetField StateData[0].SurvivalRoundFlags None
+SetField StateData[0].SurvivalWaveFlags None
+SetField StateData[0].SurvivalLivesFlags None
+SetField StateData[0].SurvivalDifficultyFlags None
+SetField StateData[0].Unused 0
+SetField StateData[0].GeneralKudosFlags None
+SetField StateData[0].UnitZoomFlags None
+SetField StateData[0].UnitInventoryFlags 0
+SetField StateData[0].Unused3 0
+SetField StateData[0].UnitGeneralFlags BinocularsNotActive,HasShields
+SetField StateData[0].Unused4 0
+SetField StateData[0].WeaponKudosFlags None
+SetField StateData[0].WeaponStatusFlags None
+SetField StateData[0].WeaponTargetFlags None
+SetField StateData[0].WeaponTargetBFlags None
+SetField StateData[0].Player_SpecialFlags None
+SetField StateData[0].Weapon_SpecialFlags None
+SetField StateData[0].InverseFlags NotZoomedIn
+SetField StateData[0].UnusedFlags4 0
+SetField StateData[0].ConsumableFlags None
+SetField StateData[0].EnergyMeterFlags None
+AddBlockElements PlacementData 1
+SetField PlacementData[0].Anchor TopCenter
+SetField PlacementData[0].AnchorFlags 0
+SetField PlacementData[0].Origin 0 -1
+SetField PlacementData[0].Offset 0 34
+SetField PlacementData[0].Scale 1.15 1.1
+SetField ParallaxData ui\chud\parallax\spartan.chud_widget_parallax_data
+AddBlockElements BitmapWidgets 6
+SetField BitmapWidgets[0].Name flahsy
+SetField BitmapWidgets[0].ScriptingClass UseParent
+SetField BitmapWidgets[0].BaseFlags None
+SetField BitmapWidgets[0].SortLayer Inherited
+AddBlockElements BitmapWidgets[0].StateData 1
+SetField BitmapWidgets[0].StateData[0].GameState None
+SetField BitmapWidgets[0].StateData[0].SkinState None
+SetField BitmapWidgets[0].StateData[0].GameTeam None
+SetField BitmapWidgets[0].StateData[0].WindowState WideFull, WideHalf, NativeFull, StandardFull, WideQuarter, StandardHalf, NativeQuarter
+SetField BitmapWidgets[0].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[0].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[0].StateData[0].EditorFlags None
+SetField BitmapWidgets[0].StateData[0].HindsightState None
+SetField BitmapWidgets[0].StateData[0].SkullFlags None
+SetField BitmapWidgets[0].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[0].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[0].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[0].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[0].StateData[0].Unused 0
+SetField BitmapWidgets[0].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[0].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[0].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[0].StateData[0].Unused3 0
+SetField BitmapWidgets[0].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[0].StateData[0].Unused4 0
+SetField BitmapWidgets[0].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[0].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[0].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[0].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[0].StateData[0].Player_SpecialFlags ShieldsHeavyDamage
+SetField BitmapWidgets[0].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[0].StateData[0].InverseFlags None
+SetField BitmapWidgets[0].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[0].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[0].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[0].PlacementData 1
+SetField BitmapWidgets[0].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[0].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[0].PlacementData[0].Origin 1 0
+SetField BitmapWidgets[0].PlacementData[0].Offset 0 -69
+SetField BitmapWidgets[0].PlacementData[0].Scale 1.01 1
+AddBlockElements BitmapWidgets[0].AnimationData 1
+SetField BitmapWidgets[0].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Initializing.Animation null
+SetField BitmapWidgets[0].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Active.Animation ui\chud\animations\invisible.chud_animation_definition
+SetField BitmapWidgets[0].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[0].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[0].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[0].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[0].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[0].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[0].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[0].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[0].RenderData 1
+SetField BitmapWidgets[0].RenderData[0].ShaderType Meter
+SetField BitmapWidgets[0].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[0].RenderData[0].ExternalInput BodyVitality
+SetField BitmapWidgets[0].RenderData[0].RangeInput Zero
+SetField BitmapWidgets[0].RenderData[0].LocalColorA 0 255 17 17
+SetField BitmapWidgets[0].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[0].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[0].RenderData[0].LocalColorD 0 0 0 0
+SetField BitmapWidgets[0].RenderData[0].LocalScalarA 1
+SetField BitmapWidgets[0].RenderData[0].LocalScalarB 0.1
+SetField BitmapWidgets[0].RenderData[0].LocalScalarC 0
+SetField BitmapWidgets[0].RenderData[0].LocalScalarD 0
+SetField BitmapWidgets[0].RenderData[0].OutputColorA LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorB LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorC LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorD LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorE LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[0].RenderData[0].OutputScalarB FlashAnimation
+SetField BitmapWidgets[0].RenderData[0].OutputScalarC LocalA
+SetField BitmapWidgets[0].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[0].RenderData[0].OutputScalarE Input
+SetField BitmapWidgets[0].RenderData[0].OutputScalarF Input
+SetField BitmapWidgets[0].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[0].RuntimeWidgetIndex 0
+SetField BitmapWidgets[0].Flags MirrorHorizontally,Stretch
+SetField BitmapWidgets[0].Bitmap ui\chud\bitmaps\shield_flash_bleed.bitmap
+SetField BitmapWidgets[0].BitmapSequenceIndex 0
+SetField BitmapWidgets[0].Padding2 null
+SetField BitmapWidgets[1].Name border
+SetField BitmapWidgets[1].ScriptingClass UseParent
+SetField BitmapWidgets[1].BaseFlags None
+SetField BitmapWidgets[1].SortLayer Inherited
+AddBlockElements BitmapWidgets[1].StateData 1
+SetField BitmapWidgets[1].StateData[0].GameState None
+SetField BitmapWidgets[1].StateData[0].SkinState None
+SetField BitmapWidgets[1].StateData[0].GameTeam None
+SetField BitmapWidgets[1].StateData[0].WindowState WideFull, WideHalf, NativeFull, StandardFull, WideQuarter, StandardHalf, NativeQuarter
+SetField BitmapWidgets[1].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[1].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[1].StateData[0].EditorFlags None
+SetField BitmapWidgets[1].StateData[0].HindsightState None
+SetField BitmapWidgets[1].StateData[0].SkullFlags None
+SetField BitmapWidgets[1].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[1].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[1].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[1].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[1].StateData[0].Unused 0
+SetField BitmapWidgets[1].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[1].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[1].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[1].StateData[0].Unused3 0
+SetField BitmapWidgets[1].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[1].StateData[0].Unused4 0
+SetField BitmapWidgets[1].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[1].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[1].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[1].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[1].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[1].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[1].StateData[0].InverseFlags None
+SetField BitmapWidgets[1].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[1].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[1].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[1].PlacementData 1
+SetField BitmapWidgets[1].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[1].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[1].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[1].PlacementData[0].Offset 0 24
+SetField BitmapWidgets[1].PlacementData[0].Scale 0.4 0.4
+AddBlockElements BitmapWidgets[1].AnimationData 1
+SetField BitmapWidgets[1].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Initializing.Animation ui\chud\animations\shield_color.chud_animation_definition
+SetField BitmapWidgets[1].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[1].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[1].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[1].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[1].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[1].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[1].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[1].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[1].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[1].RenderData 1
+SetField BitmapWidgets[1].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[1].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[1].RenderData[0].ExternalInput Zero
+SetField BitmapWidgets[1].RenderData[0].RangeInput HealthRecentDamage
+SetField BitmapWidgets[1].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[1].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[1].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[1].RenderData[0].LocalColorD 0 0 0 0
+SetField BitmapWidgets[1].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[1].RenderData[0].LocalScalarB 1
+SetField BitmapWidgets[1].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[1].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[1].RenderData[0].OutputColorA HighlightForeground
+SetField BitmapWidgets[1].RenderData[0].OutputColorB HighlightForeground
+SetField BitmapWidgets[1].RenderData[0].OutputColorC HighlightForeground
+SetField BitmapWidgets[1].RenderData[0].OutputColorD HighlightForeground
+SetField BitmapWidgets[1].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[1].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[1].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[1].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[1].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[1].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[1].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[1].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[1].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[1].RuntimeWidgetIndex 1
+SetField BitmapWidgets[1].Flags Stretch
+SetField BitmapWidgets[1].Bitmap ui\chud\bitmaps\health_border.bitmap
+SetField BitmapWidgets[1].BitmapSequenceIndex 0
+SetField BitmapWidgets[1].Padding2 null
+SetField BitmapWidgets[2].Name meter
+SetField BitmapWidgets[2].ScriptingClass UseParent
+SetField BitmapWidgets[2].BaseFlags None
+SetField BitmapWidgets[2].SortLayer Foreground
+AddBlockElements BitmapWidgets[2].StateData 1
+SetField BitmapWidgets[2].StateData[0].GameState None
+SetField BitmapWidgets[2].StateData[0].SkinState None
+SetField BitmapWidgets[2].StateData[0].GameTeam None
+SetField BitmapWidgets[2].StateData[0].WindowState WideFull, WideHalf, NativeFull, StandardFull, WideQuarter, StandardHalf, NativeQuarter
+SetField BitmapWidgets[2].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[2].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[2].StateData[0].EditorFlags None
+SetField BitmapWidgets[2].StateData[0].HindsightState None
+SetField BitmapWidgets[2].StateData[0].SkullFlags None
+SetField BitmapWidgets[2].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[2].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[2].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[2].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[2].StateData[0].Unused 0
+SetField BitmapWidgets[2].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[2].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[2].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[2].StateData[0].Unused3 0
+SetField BitmapWidgets[2].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[2].StateData[0].Unused4 0
+SetField BitmapWidgets[2].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[2].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[2].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[2].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[2].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[2].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[2].StateData[0].InverseFlags None
+SetField BitmapWidgets[2].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[2].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[2].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[2].PlacementData 1
+SetField BitmapWidgets[2].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[2].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[2].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[2].PlacementData[0].Offset 0 24
+SetField BitmapWidgets[2].PlacementData[0].Scale 0.4 0.4
+AddBlockElements BitmapWidgets[2].AnimationData 1
+SetField BitmapWidgets[2].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Initializing.Animation ui\chud\animations\shield_color.chud_animation_definition
+SetField BitmapWidgets[2].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[2].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[2].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[2].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[2].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[2].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[2].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[2].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[2].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[2].RenderData 1
+SetField BitmapWidgets[2].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[2].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[2].RenderData[0].ExternalInput BodyVitality
+SetField BitmapWidgets[2].RenderData[0].RangeInput HealthRecentDamage
+SetField BitmapWidgets[2].RenderData[0].LocalColorA 0 82 122 102
+SetField BitmapWidgets[2].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[2].RenderData[0].LocalColorC 0 255 255 255
+SetField BitmapWidgets[2].RenderData[0].LocalColorD 0 255 0 0
+SetField BitmapWidgets[2].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[2].RenderData[0].LocalScalarB 0.2
+SetField BitmapWidgets[2].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[2].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[2].RenderData[0].OutputColorA LocalA
+SetField BitmapWidgets[2].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[2].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[2].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[2].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[2].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[2].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[2].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[2].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[2].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[2].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[2].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[2].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[2].RuntimeWidgetIndex 2
+SetField BitmapWidgets[2].Flags Stretch
+SetField BitmapWidgets[2].Bitmap ui\chud\bitmaps\health_meter.bitmap
+SetField BitmapWidgets[2].BitmapSequenceIndex 0
+SetField BitmapWidgets[2].Padding2 null
+SetField BitmapWidgets[3].Name meter_small
+SetField BitmapWidgets[3].ScriptingClass UseParent
+SetField BitmapWidgets[3].BaseFlags None
+SetField BitmapWidgets[3].SortLayer Background
+AddBlockElements BitmapWidgets[3].StateData 1
+SetField BitmapWidgets[3].StateData[0].GameState None
+SetField BitmapWidgets[3].StateData[0].SkinState None
+SetField BitmapWidgets[3].StateData[0].GameTeam None
+SetField BitmapWidgets[3].StateData[0].WindowState StandardQuarter
+SetField BitmapWidgets[3].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[3].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[3].StateData[0].EditorFlags None
+SetField BitmapWidgets[3].StateData[0].HindsightState None
+SetField BitmapWidgets[3].StateData[0].SkullFlags None
+SetField BitmapWidgets[3].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[3].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[3].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[3].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[3].StateData[0].Unused 0
+SetField BitmapWidgets[3].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[3].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[3].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[3].StateData[0].Unused3 0
+SetField BitmapWidgets[3].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[3].StateData[0].Unused4 0
+SetField BitmapWidgets[3].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[3].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[3].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[3].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[3].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[3].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[3].StateData[0].InverseFlags None
+SetField BitmapWidgets[3].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[3].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[3].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[3].PlacementData 1
+SetField BitmapWidgets[3].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[3].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[3].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[3].PlacementData[0].Offset 0 15
+SetField BitmapWidgets[3].PlacementData[0].Scale 0.75 0.8
+AddBlockElements BitmapWidgets[3].AnimationData 1
+SetField BitmapWidgets[3].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Initializing.Animation ui\chud\animations\shield_color.chud_animation_definition
+SetField BitmapWidgets[3].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[3].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[3].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[3].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[3].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[3].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[3].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[3].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[3].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[3].RenderData 1
+SetField BitmapWidgets[3].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[3].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[3].RenderData[0].ExternalInput BodyVitality
+SetField BitmapWidgets[3].RenderData[0].RangeInput HealthRecentDamage
+SetField BitmapWidgets[3].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[3].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[3].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[3].RenderData[0].LocalColorD 1 255 255 255
+SetField BitmapWidgets[3].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[3].RenderData[0].LocalScalarB 0.2
+SetField BitmapWidgets[3].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[3].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[3].RenderData[0].OutputColorA SecondaryBackground
+SetField BitmapWidgets[3].RenderData[0].OutputColorB LocalC
+SetField BitmapWidgets[3].RenderData[0].OutputColorC LocalD
+SetField BitmapWidgets[3].RenderData[0].OutputColorD LocalB
+SetField BitmapWidgets[3].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[3].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[3].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[3].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[3].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[3].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[3].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[3].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[3].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[3].RuntimeWidgetIndex 6
+SetField BitmapWidgets[3].Flags None
+SetField BitmapWidgets[3].Bitmap ui\chud\bitmaps\shield_meter_small.bitmap
+SetField BitmapWidgets[3].BitmapSequenceIndex 0
+SetField BitmapWidgets[3].Padding2 null
+SetField BitmapWidgets[4].Name border_small
+SetField BitmapWidgets[4].ScriptingClass UseParent
+SetField BitmapWidgets[4].BaseFlags None
+SetField BitmapWidgets[4].SortLayer Background
+AddBlockElements BitmapWidgets[4].StateData 1
+SetField BitmapWidgets[4].StateData[0].GameState None
+SetField BitmapWidgets[4].StateData[0].SkinState None
+SetField BitmapWidgets[4].StateData[0].GameTeam None
+SetField BitmapWidgets[4].StateData[0].WindowState StandardQuarter
+SetField BitmapWidgets[4].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[4].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[4].StateData[0].EditorFlags None
+SetField BitmapWidgets[4].StateData[0].HindsightState None
+SetField BitmapWidgets[4].StateData[0].SkullFlags None
+SetField BitmapWidgets[4].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[4].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[4].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[4].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[4].StateData[0].Unused 0
+SetField BitmapWidgets[4].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[4].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[4].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[4].StateData[0].Unused3 0
+SetField BitmapWidgets[4].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[4].StateData[0].Unused4 0
+SetField BitmapWidgets[4].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[4].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[4].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[4].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[4].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[4].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[4].StateData[0].InverseFlags None
+SetField BitmapWidgets[4].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[4].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[4].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[4].PlacementData 1
+SetField BitmapWidgets[4].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[4].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[4].PlacementData[0].Origin 0 -1
+SetField BitmapWidgets[4].PlacementData[0].Offset 0 15
+SetField BitmapWidgets[4].PlacementData[0].Scale 0.75 0.8
+AddBlockElements BitmapWidgets[4].AnimationData 1
+SetField BitmapWidgets[4].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Initializing.Animation ui\chud\animations\shield_color.chud_animation_definition
+SetField BitmapWidgets[4].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Active.Animation ui\chud\animations\shield_dimming.chud_animation_definition
+SetField BitmapWidgets[4].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[4].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[4].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[4].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[4].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[4].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[4].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[4].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[4].RenderData 1
+SetField BitmapWidgets[4].RenderData[0].ShaderType MeterShield
+SetField BitmapWidgets[4].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[4].RenderData[0].ExternalInput Zero
+SetField BitmapWidgets[4].RenderData[0].RangeInput HealthRecentDamage
+SetField BitmapWidgets[4].RenderData[0].LocalColorA 0 0 0 0
+SetField BitmapWidgets[4].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[4].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[4].RenderData[0].LocalColorD 0 0 0 0
+SetField BitmapWidgets[4].RenderData[0].LocalScalarA 2
+SetField BitmapWidgets[4].RenderData[0].LocalScalarB 1
+SetField BitmapWidgets[4].RenderData[0].LocalScalarC 0.7
+SetField BitmapWidgets[4].RenderData[0].LocalScalarD 1
+SetField BitmapWidgets[4].RenderData[0].OutputColorA HighlightForeground
+SetField BitmapWidgets[4].RenderData[0].OutputColorB HighlightForeground
+SetField BitmapWidgets[4].RenderData[0].OutputColorC HighlightForeground
+SetField BitmapWidgets[4].RenderData[0].OutputColorD HighlightForeground
+SetField BitmapWidgets[4].RenderData[0].OutputColorE WarningFlash
+SetField BitmapWidgets[4].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[4].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[4].RenderData[0].OutputScalarB RangeInput
+SetField BitmapWidgets[4].RenderData[0].OutputScalarC LocalC
+SetField BitmapWidgets[4].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[4].RenderData[0].OutputScalarE FlashAnimation
+SetField BitmapWidgets[4].RenderData[0].OutputScalarF LocalD
+SetField BitmapWidgets[4].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[4].RuntimeWidgetIndex 7
+SetField BitmapWidgets[4].Flags None
+SetField BitmapWidgets[4].Bitmap ui\chud\bitmaps\shield_border.bitmap
+SetField BitmapWidgets[4].BitmapSequenceIndex 0
+SetField BitmapWidgets[4].Padding2 null
+SetField BitmapWidgets[5].Name flahsy_small
+SetField BitmapWidgets[5].ScriptingClass UseParent
+SetField BitmapWidgets[5].BaseFlags None
+SetField BitmapWidgets[5].SortLayer Inherited
+AddBlockElements BitmapWidgets[5].StateData 1
+SetField BitmapWidgets[5].StateData[0].GameState None
+SetField BitmapWidgets[5].StateData[0].SkinState None
+SetField BitmapWidgets[5].StateData[0].GameTeam None
+SetField BitmapWidgets[5].StateData[0].WindowState StandardQuarter
+SetField BitmapWidgets[5].StateData[0].MultiplayerEvents None
+SetField BitmapWidgets[5].StateData[0].UnitBaseFlags None
+SetField BitmapWidgets[5].StateData[0].EditorFlags None
+SetField BitmapWidgets[5].StateData[0].HindsightState None
+SetField BitmapWidgets[5].StateData[0].SkullFlags None
+SetField BitmapWidgets[5].StateData[0].SurvivalRoundFlags None
+SetField BitmapWidgets[5].StateData[0].SurvivalWaveFlags None
+SetField BitmapWidgets[5].StateData[0].SurvivalLivesFlags None
+SetField BitmapWidgets[5].StateData[0].SurvivalDifficultyFlags None
+SetField BitmapWidgets[5].StateData[0].Unused 0
+SetField BitmapWidgets[5].StateData[0].GeneralKudosFlags None
+SetField BitmapWidgets[5].StateData[0].UnitZoomFlags None
+SetField BitmapWidgets[5].StateData[0].UnitInventoryFlags 0
+SetField BitmapWidgets[5].StateData[0].Unused3 0
+SetField BitmapWidgets[5].StateData[0].UnitGeneralFlags HasShields
+SetField BitmapWidgets[5].StateData[0].Unused4 0
+SetField BitmapWidgets[5].StateData[0].WeaponKudosFlags None
+SetField BitmapWidgets[5].StateData[0].WeaponStatusFlags None
+SetField BitmapWidgets[5].StateData[0].WeaponTargetFlags None
+SetField BitmapWidgets[5].StateData[0].WeaponTargetBFlags None
+SetField BitmapWidgets[5].StateData[0].Player_SpecialFlags None
+SetField BitmapWidgets[5].StateData[0].Weapon_SpecialFlags None
+SetField BitmapWidgets[5].StateData[0].InverseFlags None
+SetField BitmapWidgets[5].StateData[0].UnusedFlags4 0
+SetField BitmapWidgets[5].StateData[0].ConsumableFlags None
+SetField BitmapWidgets[5].StateData[0].EnergyMeterFlags None
+AddBlockElements BitmapWidgets[5].PlacementData 1
+SetField BitmapWidgets[5].PlacementData[0].Anchor Parent
+SetField BitmapWidgets[5].PlacementData[0].AnchorFlags 0
+SetField BitmapWidgets[5].PlacementData[0].Origin 1.02 0
+SetField BitmapWidgets[5].PlacementData[0].Offset 0 15
+SetField BitmapWidgets[5].PlacementData[0].Scale 1.45 0.8
+AddBlockElements BitmapWidgets[5].AnimationData 1
+SetField BitmapWidgets[5].AnimationData[0].Initializing.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Initializing.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Initializing.Animation null
+SetField BitmapWidgets[5].AnimationData[0].Initializing.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Active.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Active.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Active.Animation ui\chud\animations\invisible.chud_animation_definition
+SetField BitmapWidgets[5].AnimationData[0].Active.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Flashing.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Flashing.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Flashing.Animation ui\chud\animations\shields_out.chud_animation_definition
+SetField BitmapWidgets[5].AnimationData[0].Flashing.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Readying.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Readying.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Readying.Animation null
+SetField BitmapWidgets[5].AnimationData[0].Readying.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Unreadying.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Unreadying.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Unreadying.Animation null
+SetField BitmapWidgets[5].AnimationData[0].Unreadying.StateUnknown 0
+SetField BitmapWidgets[5].AnimationData[0].Impulse.Flags 0
+SetField BitmapWidgets[5].AnimationData[0].Impulse.InputType Time
+SetField BitmapWidgets[5].AnimationData[0].Impulse.Animation null
+SetField BitmapWidgets[5].AnimationData[0].Impulse.StateUnknown 0
+AddBlockElements BitmapWidgets[5].RenderData 1
+SetField BitmapWidgets[5].RenderData[0].ShaderType Meter
+SetField BitmapWidgets[5].RenderData[0].BlendModeHO AlphaBlend
+SetField BitmapWidgets[5].RenderData[0].ExternalInput BodyVitality
+SetField BitmapWidgets[5].RenderData[0].RangeInput Zero
+SetField BitmapWidgets[5].RenderData[0].LocalColorA 0 255 17 17
+SetField BitmapWidgets[5].RenderData[0].LocalColorB 0 3 32 55
+SetField BitmapWidgets[5].RenderData[0].LocalColorC 0 102 188 255
+SetField BitmapWidgets[5].RenderData[0].LocalColorD 0 0 0 0
+SetField BitmapWidgets[5].RenderData[0].LocalScalarA 1
+SetField BitmapWidgets[5].RenderData[0].LocalScalarB 0.1
+SetField BitmapWidgets[5].RenderData[0].LocalScalarC 0
+SetField BitmapWidgets[5].RenderData[0].LocalScalarD 0
+SetField BitmapWidgets[5].RenderData[0].OutputColorA LocalA
+SetField BitmapWidgets[5].RenderData[0].OutputColorB LocalA
+SetField BitmapWidgets[5].RenderData[0].OutputColorC LocalA
+SetField BitmapWidgets[5].RenderData[0].OutputColorD LocalA
+SetField BitmapWidgets[5].RenderData[0].OutputColorE LocalA
+SetField BitmapWidgets[5].RenderData[0].OutputColorF LocalA
+SetField BitmapWidgets[5].RenderData[0].OutputScalarA Input
+SetField BitmapWidgets[5].RenderData[0].OutputScalarB FlashAnimation
+SetField BitmapWidgets[5].RenderData[0].OutputScalarC LocalA
+SetField BitmapWidgets[5].RenderData[0].OutputScalarD LocalB
+SetField BitmapWidgets[5].RenderData[0].OutputScalarE Input
+SetField BitmapWidgets[5].RenderData[0].OutputScalarF Input
+SetField BitmapWidgets[5].RenderData[0].ScissorRect 0 0 0 0
+SetField BitmapWidgets[5].RuntimeWidgetIndex 9
+SetField BitmapWidgets[5].Flags MirrorHorizontally
+SetField BitmapWidgets[5].Bitmap ui\chud\bitmaps\shield_flash_bleed.bitmap
+SetField BitmapWidgets[5].BitmapSequenceIndex 0
+SetField BitmapWidgets[5].Padding2 null
+savetagchanges
+exit
+exit

@@ -2,10 +2,10 @@
 D:\eldewrito\eldewrito 0.7\ElDewrito\maps
 
 # echo ==Set Variables...==
-SetVariable workingdir ""
-SetVariable modsfolder ""
-SetVariable odstmaps ""
-SetVariable reachmaps ""
+SetVariable workingdir "C:\Users\Matthew\Documents\GitHub\EDBR"
+SetVariable modsfolder "D:\eldewrito\eldewrito 0.7\ElDewrito\mods"
+SetVariable odstmaps "E:\Halo Resources\Halo3odst"
+SetVariable reachmaps "E:\Halo Resources\HaloReach"
 
 // Update at the end of the script
 CreateModPackage 1 Large
@@ -19,11 +19,9 @@ Mainmenu Multiplayer Character
 		// CUSTOMIZATION
 ################################################################################
 
-openmodpackage workingdir\paks\customization+.pak
+openmodpackage workingdir\paks\SpartanCustomization.pak
 applymodpackage
 exitmodpackage
-
-
 
 ################################################################################
 		// H100 STREETS GENERAL
@@ -96,14 +94,91 @@ setfield PlayerStartingProfile[0].PrimaryWeapon objects\weapons\rifle\battle_rif
 foreach Scenery setfield PlacementFlags.Flags none
 foreach Machines setfield PlacementFlags.Flags none
 foreach Crates setfield PlacementFlags.Flags none
+SetField MachinePalette[3].Object null
+SetField MachinePalette[6].Object null
+SetField MachinePalette[7].Object null
+SetField MachinePalette[8].Object null
+SetField MachinePalette[9].Object null
+SetField MachinePalette[10].Object null
+SetField MachinePalette[11].Object null
+SetField MachinePalette[12].Object null
+SetField MachinePalette[13].Object null
+SetField MachinePalette[14].Object null
+SetField MachinePalette[15].Object null
+SetField MachinePalette[16].Object null
+SetField MachinePalette[17].Object null
 SaveTagChanges
 Exit
+
+edittag levels\atlas\l300\sky\l300_sky.area_screen_effect
+SetField ScreenEffects[0].GammaEnhance 0
+savetagchanges
+exit
+
+################################################################################
+		// Health System
+################################################################################
+
+openmodpackage workingdir\paks\health.pak
+applymodpackage
+exitmodpackage
+
+EditTag objects\characters\masterchief\mp_masterchief\mp_masterchief.model
+SetField NewDamageInfo[0].MaximumVitality 200
+SetField NewDamageInfo[0].RuntimeHealthRechargeVelocity 0
+savetagchanges
+exit
+
+edittag objects\characters\masterchief\mp_masterchief\mp_masterchief.biped
+AddBlockElements RevivingEquipment
+SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+savetagchanges
+exit
+#__________________________________________________________________________________________________
+EditTag objects\characters\spartans\midnight_spartan.model
+SetField NewDamageInfo[0].MaximumVitality 200
+SetField NewDamageInfo[0].RuntimeHealthRechargeVelocity 0
+savetagchanges
+exit
+
+edittag objects\characters\spartans\midnight_spartan.biped
+AddBlockElements RevivingEquipment
+SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+savetagchanges
+exit
+#__________________________________________________________________________________________________
+EditTag objects\characters\masterchief\ms23_mp_masterchief\ms23_mp_masterchief.model
+SetField NewDamageInfo[0].MaximumVitality 200
+SetField NewDamageInfo[0].RuntimeHealthRechargeVelocity 0
+savetagchanges
+exit
+
+edittag objects\characters\masterchief\ms23_mp_masterchief\ms23_mp_masterchief.biped
+AddBlockElements RevivingEquipment
+SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+savetagchanges
+exit
+#__________________________________________________________________________________________________
+EditTag d_flog_flag\objects\characters\h4_spartan\h4_spartan.model
+SetField NewDamageInfo[0].MaximumVitality 200
+SetField NewDamageInfo[0].RuntimeHealthRechargeVelocity 0
+savetagchanges
+exit
+
+edittag objects\characters\masterchief\mp_masterchief\h4_spartan.biped
+AddBlockElements RevivingEquipment
+SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_small.equipment
+savetagchanges
+exit
 
 // Forge Pallette
 RunCommands workingdir\cmds\ForgePalette.cmds
 
 
-
+echo ==MORE REFORGE BLOCK==
+RunCommands "workingdir\cmds\extra_reforge_0.1.cmds"
+RunCommands "workingdir\cmds\extra_reforge_0.5.cmds"
+RunCommands "workingdir\cmds\extra_reforge_1.cmds"
 
 
 AddModFiles "workingdir\assets"

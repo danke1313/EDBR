@@ -1,5 +1,7 @@
 
-
+opencachefile reachmaps\m30.map
+porttag objects\props\human\pioneer\pioneer_weapons_stash\pioneer_weapons_stash.device_machine
+exit
 
 # Machine [82] -------------------------------------------------------------------------------------------------------------
 AddForgeItem "FORCEFIELD BARRIER, COVENANT" 82 objects\gear\atlas\covenant\forcefield_barrier\forcefield_barrier.device_machine
@@ -9,8 +11,7 @@ AddForgeItem "Cache Door" 82 objects\levels\atlas\h100\evac_door\evac_door.devic
 AddForgeItem "Nav Barrier" 82 objects\levels\atlas\shared\hub_navigation_machines\hub_nav_jersey_barrier\hub_nav_jersey_barrier.device_machine
 AddForgeItem "Hub Door" 82 objects\levels\atlas\h100\hub_door\hub_door.device_machine
 AddForgeItem "Life Large" 82 objects\levels\atlas\l200\lift_large\lift_large.device_machine
-
-
+AddForgeItem "Weapon Stash" 82 objects\props\human\pioneer\pioneer_weapons_stash\pioneer_weapons_stash.device_machine
 
 
 # Misc [11] -------------------------------------------------------------------------------------------------------------
@@ -41,6 +42,13 @@ AddForgeItem "Trash bag 1`" 11 objects\levels\atlas\shared\trash_bag_d\trash_bag
 AddForgeItem "Trash bag 2`" 11 objects\levels\atlas\shared\trash_bag_e\trash_bag_e.scenery
 AddForgeItem "Trash bag 3`" 11 objects\levels\atlas\shared\trash_bag_i\trash_bag_i.scenery
 AddForgeItem "Trash bag 4'" 11 objects\levels\atlas\shared\trash_bag_i01\trash_bag_i01.scenery
+
+echo Remove Turrets from Covie Tower
+
+edittag objects\gear\covenant\military\cov_watchtower\cov_watchtower_pod\cov_watchtower_pod.model
+RemoveBlockElements Variants[3].Objects 0 3
+savetagchanges
+exit
 
 #weapons
 AddForgeItem "Automag" 76 objects\weapons\pistol\automag\automag.weapon
