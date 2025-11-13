@@ -180,6 +180,14 @@ exit
 // Forge Pallette
 RunCommands workingdir\cmds\ForgePalette.cmds
 
+###
+### Rename This
+###
+RunCommands "workingdir\cmds\drop_pod.cmds"
+RunCommands "workingdir\cmds\supply_capsule.cmds"
+RunCommands "workingdir\cmds\sounds.cmds"
+RunCommands "workingdir\cmds\barrier.cmds"
+RunCommands "workingdir\cmds\scnr_setups\scenarios.cmds"
 
 echo ==MORE REFORGE BLOCK==
 RunCommands "workingdir\cmds\extra_reforge_0.1.cmds"

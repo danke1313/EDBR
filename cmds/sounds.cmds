@@ -1,0 +1,5 @@
+DuplicateTag fx\podium\ui_player_appear.sound battle_royale\ui\winning
+EditTag battle_royale\ui\winning.sound
+ImportSound "workingdir\sounds\winning.mp3"
+SaveTagChanges
+Exit

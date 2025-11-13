@@ -1,0 +1,26 @@
+RunCommands "workingdir\cmds\scnr_setups\client_strings.cmds"
+
+EditTag levels\custom\streetsday\streetsday.scnr
+
+CS < "workingdir\cmds\barrier_setup.cs" "workingdir\cmds\scnr_setups\streets.txt"
+
+AddBlockElements BipedPalette
+SetField BipedPalette[*].Object objects\battle_royale\barrier_standard.biped
+AddBlockElements BipedPalette
+SetField BipedPalette[*].Object objects\battle_royale\barrier_standard_visual.biped
+
+AddBlockElements VehiclePalette
+SetField VehiclePalette[*].Object objects\vehicles\odst_pod\odst_pod.vehicle
+
+AddBlockElements CratePalette
+SetField CratePalette[*].Object objects\battle_royale\supply_capsule.crate
+
+AddBlockElements TriggerVolumes
+SetField TriggerVolumes[*].Name none
+
+RunCommands "workingdir\cmds\scnr_setups\client_messages.cmds"
+
+CompileScripts "workingdir\cmds\scnr_setups\streets.hsc"
+
+SaveTagChanges
+Exit

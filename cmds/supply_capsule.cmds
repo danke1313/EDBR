@@ -1,0 +1,16 @@
+DuplicateTag objects\gear\human\military\resupply_capsule_unfired\resupply_capsule_unfired.model objects\battle_royale\supply_capsule
+EditTag objects\battle_royale\supply_capsule.model
+
+RemoveBlockElements Variants 0 1
+
+SaveTagChanges
+Exit
+
+DuplicateTag objects\gear\human\military\resupply_capsule_unfired\resupply_capsule_unfired.crate objects\battle_royale\supply_capsule
+EditTag objects\battle_royale\supply_capsule.crate
+
+SetField Model objects\battle_royale\supply_capsule.model
+RemoveBlockElements MultiplayerObject 0 *
+
+SaveTagChanges
+Exit

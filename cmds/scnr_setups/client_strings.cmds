@@ -1,0 +1,23 @@
+CreateTag unic battle_royale\ui\event_messages
+EditTag battle_royale\ui\event_messages.multilingual_unicode_string_list
+
+StringId Add event_dropping
+SetString English event_dropping "Get ready to drop!"
+
+StringId Add event_zone_shrinking
+SetString English event_zone_shrinking "Zone is shrinking!"
+
+StringId Add event_supply_drop
+SetString English event_supply_drop "Supplies have dropped!"
+
+StringId Add event_winner
+SetString English event_winner "Winner Winner, Chicken Dinner!"
+
+StringId Add event_loser
+SetString English event_loser "Too Bad, So Sad!"
+
+StringId Add event_tie
+SetString English event_tie "It's a draw!"
+
+SaveTagChanges
+Exit

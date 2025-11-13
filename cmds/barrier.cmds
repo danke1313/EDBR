@@ -1,0 +1,80 @@
+# Standard barrier object is 200 wu X, 200 wu Y, 300 wu Z
+
+DuplicateTag objects\gear\human\industrial\street_cone\street_cone.render_model objects\battle_royale\barrier_standard
+EditTag objects\battle_royale\barrier_standard.render_model
+StringId Add barrier
+SetField Name barrier
+SetField Checksum 0
+SetField Nodes[0].Name root
+SetField Materials[0].RenderMethod objects\multi\shaders\multiplayer_object_plasma.shader
+ReplaceRenderGeometry "workingdir\models\barrier\barrier_standard.dae"
+SaveTagChanges
+Exit
+
+ImportAnimation "workingdir\models\barrier\any idle.jma" objects\battle_royale\barrier_standard
+EditTag objects\battle_royale\barrier_standard.model_animation_graph
+SaveTagChanges
+Exit
+
+DuplicateTag objects\gear\human\industrial\street_cone\street_cone.model objects\battle_royale\barrier_standard
+EditTag objects\battle_royale\barrier_standard.model
+SetField RenderModel objects\battle_royale\barrier_standard.render_model
+SetField Animation objects\battle_royale\barrier_standard.model_animation_graph
+SetField DisappearDistance 0
+SetField BeginFadeDistance 0
+SetField Materials[0].MaterialName energy
+SetField Materials[0].GlobalMaterialIndex 144
+SetField Nodes[0].Name root
+SetField ModelObjectData[0].Offset 0 0 0
+SetField ModelObjectData[0].Radius 200
+SaveTagChanges
+Exit
+
+CreateTag bipd objects\battle_royale\barrier_standard
+EditTag objects\battle_royale\barrier_standard.biped
+
+SetField ObjectType.Halo3ODST Biped
+SetField ObjectFlags.Flags DoesNotCastShadow,NotAPathfindingObstacle
+SetField BoundingRadius 200
+SetField Model objects\battle_royale\barrier_standard.model
+
+SetField PhysicsControlNodeIndex -1
+SetField PelvisNodeIndex -1
+SetField HeadNodeIndex -1
+
+SetField PhysicsFlags.Halo3ODST CenteredAtOrigin,ShapeSpherical,Flying,DeadCharacterCollisionGroup
+
+AddBlockElements PillShapes
+SetField PillShapes[0].MaterialIndex -1
+SetField PillShapes[0].PhantomIndex -1
+SetField PillShapes[0].ProxyCollisionGroup 2
+CopyBlockElements PillShapes 0 1
+PasteBlockElements PillShapes
+
+SaveTagChanges
+Exit
+
+DuplicateTag objects\battle_royale\barrier_standard.render_model objects\battle_royale\barrier_standard_visual
+EditTag objects\battle_royale\barrier_standard_visual.render_model
+ReplaceRenderGeometry "workingdir\models\barrier\barrier_standard_visual.dae"
+SetField Geometry.Meshes[0].Parts[0].FlagsNew PreventBackfaceCulling
+SaveTagChanges
+Exit
+
+DuplicateTag objects\battle_royale\barrier_standard.model objects\battle_royale\barrier_standard_visual
+EditTag objects\battle_royale\barrier_standard_visual.model
+SetField RenderModel objects\battle_royale\barrier_standard_visual.render_model
+SaveTagChanges
+Exit
+
+DuplicateTag objects\battle_royale\barrier_standard.biped objects\battle_royale\barrier_standard_visual
+EditTag objects\battle_royale\barrier_standard_visual.biped
+SetField Model objects\battle_royale\barrier_standard_visual.model
+SaveTagChanges
+Exit
+
+DuplicateTag objects\weapons\rifle\assault_rifle\damage_effects\assault_rifle_bullet.damage_effect objects\battle_royale\barrier_damage
+EditTag objects\battle_royale\barrier_damage.damage_effect
+SetField Flags IgnoresDamageResistance
+SaveTagChanges
+Exit

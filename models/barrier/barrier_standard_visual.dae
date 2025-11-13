@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 4.1.1 commit date:2024-04-15, commit time:15:11, hash:e1743a0317bc</authoring_tool>
+    </contributor>
+    <created>2025-11-12T12:24:42</created>
+    <modified>2025-11-12T12:24:42</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_effects>
+    <effect id="multiplayer_object_plasma-effect">
+      <profile_COMMON>
+        <technique sid="common">
+          <lambert>
+            <emission>
+              <color sid="emission">0 0 0 1</color>
+            </emission>
+            <diffuse>
+              <color sid="diffuse">0.8 0.8 0.8 1</color>
+            </diffuse>
+            <index_of_refraction>
+              <float sid="ior">1.45</float>
+            </index_of_refraction>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_images/>
+  <library_materials>
+    <material id="multiplayer_object_plasma-material" name="multiplayer_object_plasma">
+      <instance_effect url="#multiplayer_object_plasma-effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="default_default-mesh" name="default:default">
+      <mesh>
+        <source id="default_default-mesh-positions">
+          <float_array id="default_default-mesh-positions-array" count="96">0 10000 -20000 0 10000 20000 3826.834 9238.795 -20000 3826.834 9238.795 20000 7071.068 7071.068 -20000 7071.068 7071.068 20000 9238.795 3826.834 -20000 9238.795 3826.834 20000 10000 0 -20000 10000 0 20000 9238.795 -3826.834 -20000 9238.795 -3826.834 20000 7071.068 -7071.068 -20000 7071.068 -7071.068 20000 3826.834 -9238.795 -20000 3826.834 -9238.795 20000 0 -10000 -20000 0 -10000 20000 -3826.834 -9238.795 -20000 -3826.834 -9238.795 20000 -7071.068 -7071.068 -20000 -7071.068 -7071.068 20000 -9238.795 -3826.834 -20000 -9238.795 -3826.834 20000 -10000 0 -20000 -10000 0 20000 -9238.795 3826.834 -20000 -9238.795 3826.834 20000 -7071.068 7071.068 -20000 -7071.068 7071.068 20000 -3826.834 9238.795 -20000 -3826.834 9238.795 20000</float_array>
+          <technique_common>
+            <accessor source="#default_default-mesh-positions-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="default_default-mesh-normals">
+          <float_array id="default_default-mesh-normals-array" count="96">-0.3826824 -0.9238801 0 -1.19935e-6 -1 0 1.20298e-6 -1 0 -0.7071059 -0.7071077 0 -0.3826846 -0.9238791 0 -0.9238791 -0.3826847 0 -0.7071077 -0.7071059 0 -1 -1.21023e-6 0 -0.9238801 -0.3826823 0 -0.9238801 0.3826823 0 -1 1.20902e-6 0 -0.7071077 0.7071059 0 -0.9238791 0.3826846 0 -0.3826845 0.9238791 0 -0.7071059 0.7071077 0 -1.20298e-6 1 0 -0.3826824 0.9238801 0 0.3826824 0.9238801 0 1.19935e-6 1 0 0.7071059 0.7071077 0 0.3826846 0.9238791 0 0.9238791 0.3826847 0 0.7071077 0.7071059 0 1 1.21023e-6 0 0.9238801 0.3826823 0 0.9238801 -0.3826823 0 1 -1.20902e-6 0 0.7071077 -0.7071059 0 0.9238791 -0.3826846 0 0.3826845 -0.9238791 0 0.7071059 -0.7071077 0 0.3826824 -0.9238801 0</float_array>
+          <technique_common>
+            <accessor source="#default_default-mesh-normals-array" count="32" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="default_default-mesh-map-0">
+          <float_array id="default_default-mesh-map-0-array" count="192">0.9375 0.5 1 1 1 0.5 0.875 0.5 0.9375 1 0.9375 0.5 0.8125 0.5 0.875 1 0.875 0.5 0.75 0.5 0.8125 1 0.8125 0.5 0.6875 0.5 0.75 1 0.75 0.5 0.625 0.5 0.6875 1 0.6875 0.5 0.5625 0.5 0.625 1 0.625 0.5 0.5 0.5 0.5625 1 0.5625 0.5 0.4375 0.5 0.5 1 0.5 0.5 0.375 0.5 0.4375 1 0.4375 0.5 0.3125 0.5 0.375 1 0.375 0.5 0.25 0.5 0.3125 1 0.3125 0.5 0.1875 0.5 0.25 1 0.25 0.5 0.125 0.5 0.1875 1 0.1875 0.5 0.0625 0.5 0.125 1 0.125 0.5 0 0.5 0.0625 1 0.0625 0.5 0.9375 0.5 0.9375 1 1 1 0.875 0.5 0.875 1 0.9375 1 0.8125 0.5 0.8125 1 0.875 1 0.75 0.5 0.75 1 0.8125 1 0.6875 0.5 0.6875 1 0.75 1 0.625 0.5 0.625 1 0.6875 1 0.5625 0.5 0.5625 1 0.625 1 0.5 0.5 0.5 1 0.5625 1 0.4375 0.5 0.4375 1 0.5 1 0.375 0.5 0.375 1 0.4375 1 0.3125 0.5 0.3125 1 0.375 1 0.25 0.5 0.25 1 0.3125 1 0.1875 0.5 0.1875 1 0.25 1 0.125 0.5 0.125 1 0.1875 1 0.0625 0.5 0.0625 1 0.125 1 0 0.5 0 1 0.0625 1</float_array>
+          <technique_common>
+            <accessor source="#default_default-mesh-map-0-array" count="96" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="default_default-mesh-vertices">
+          <input semantic="POSITION" source="#default_default-mesh-positions"/>
+        </vertices>
+        <triangles material="multiplayer_object_plasma-material" count="32">
+          <input semantic="VERTEX" source="#default_default-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#default_default-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#default_default-mesh-map-0" offset="2" set="0"/>
+          <p>2 0 0 1 1 1 0 2 2 4 3 3 3 4 4 2 0 5 6 5 6 5 6 7 4 3 8 8 7 9 7 8 10 6 5 11 10 9 12 9 10 13 8 7 14 12 11 15 11 12 16 10 9 17 14 13 18 13 14 19 12 11 20 16 15 21 15 16 22 14 13 23 18 17 24 17 18 25 16 15 26 20 19 27 19 20 28 18 17 29 22 21 30 21 22 31 20 19 32 24 23 33 23 24 34 22 21 35 26 25 36 25 26 37 24 23 38 28 27 39 27 28 40 26 25 41 30 29 42 29 30 43 28 27 44 0 2 45 31 31 46 30 29 47 2 0 48 3 4 49 1 1 50 4 3 51 5 6 52 3 4 53 6 5 54 7 8 55 5 6 56 8 7 57 9 10 58 7 8 59 10 9 60 11 12 61 9 10 62 12 11 63 13 14 64 11 12 65 14 13 66 15 16 67 13 14 68 16 15 69 17 18 70 15 16 71 18 17 72 19 20 73 17 18 74 20 19 75 21 22 76 19 20 77 22 21 78 23 24 79 21 22 80 24 23 81 25 26 82 23 24 83 26 25 84 27 28 85 25 26 86 28 27 87 29 30 88 27 28 89 30 29 90 31 31 91 29 30 92 0 2 93 1 1 94 31 31 95</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="barrier_default_default-skin" name="barrier">
+      <skin source="#default_default-mesh">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="barrier_default_default-skin-joints">
+          <Name_array id="barrier_default_default-skin-joints-array" count="1">root</Name_array>
+          <technique_common>
+            <accessor source="#barrier_default_default-skin-joints-array" count="1" stride="1">
+              <param name="JOINT" type="name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="barrier_default_default-skin-bind_poses">
+          <float_array id="barrier_default_default-skin-bind_poses-array" count="16">1 0 0 0 0 0 1 0 0 -1 0 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#barrier_default_default-skin-bind_poses-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="barrier_default_default-skin-weights">
+          <float_array id="barrier_default_default-skin-weights-array" count="32">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</float_array>
+          <technique_common>
+            <accessor source="#barrier_default_default-skin-weights-array" count="32" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#barrier_default_default-skin-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#barrier_default_default-skin-bind_poses"/>
+        </joints>
+        <vertex_weights count="32">
+          <input semantic="JOINT" source="#barrier_default_default-skin-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#barrier_default_default-skin-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 1 0 2 0 3 0 4 0 5 0 6 0 7 0 8 0 9 0 10 0 11 0 12 0 13 0 14 0 15 0 16 0 17 0 18 0 19 0 20 0 21 0 22 0 23 0 24 0 25 0 26 0 27 0 28 0 29 0 30 0 31</v>
+        </vertex_weights>
+      </skin>
+    </controller>
+  </library_controllers>
+  <library_animations>
+    <animation id="action_container-barrier" name="barrier"/>
+  </library_animations>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="barrier" name="barrier" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <node id="barrier_root" name="root" sid="root" type="JOINT">
+          <matrix sid="transform">1 0 0 0 0 0 -1 0 0 1 0 0 0 0 0 1</matrix>
+          <extra>
+            <technique profile="blender">
+              <collections type="string">Bones</collections>
+              <tip_x sid="tip_x" type="float">0</tip_x>
+              <tip_y sid="tip_y" type="float">0</tip_y>
+              <tip_z sid="tip_z" type="float">1</tip_z>
+            </technique>
+          </extra>
+        </node>
+        <node id="default_default" name="default:default" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_controller url="#barrier_default_default-skin">
+            <skeleton>#barrier_root</skeleton>
+            <bind_material>
+              <technique_common>
+                <instance_material symbol="multiplayer_object_plasma-material" target="#multiplayer_object_plasma-material">
+                  <bind_vertex_input semantic="UVMap" input_semantic="TEXCOORD" input_set="0"/>
+                </instance_material>
+              </technique_common>
+            </bind_material>
+          </instance_controller>
+        </node>
+        <extra>
+          <technique profile="blender">
+            <collections sid="collections" type="string">Bones</collections>
+            <visible_collections sid="visible_collections" type="string">Bones</visible_collections>
+            <active_collection sid="active_collection" type="string">Bones</active_collection>
+          </technique>
+        </extra>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>

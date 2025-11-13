@@ -1,0 +1,31 @@
+SetField ChapterTitleStrings battle_royale\ui\event_messages.multilingual_unicode_string_list
+
+AddBlockElements CutsceneTitles
+SetField CutsceneTitles[*].Name event_dropping
+
+AddBlockElements CutsceneTitles
+SetField CutsceneTitles[*].Name event_zone_shrinking
+
+AddBlockElements CutsceneTitles
+SetField CutsceneTitles[*].Name event_supply_drop
+
+AddBlockElements CutsceneTitles
+SetField CutsceneTitles[*].Name event_winner
+
+AddBlockElements CutsceneTitles
+SetField CutsceneTitles[*].Name event_loser
+
+AddBlockElements CutsceneTitles
+SetField CutsceneTitles[*].Name event_tie
+
+ForEach CutsceneTitles From: 0 To: 2 SetField TextBounds 0 0 655 1000
+ForEach CutsceneTitles From: 3 To: 5 SetField TextBounds 0 0 600 1000
+ForEach CutsceneTitles SetField HorizontalJustification Center
+ForEach CutsceneTitles SetField VerticalJustification Bottom
+ForEach CutsceneTitles SetField Font LargeBodyTextFont
+ForEach CutsceneTitles From: 0 To: 2 SetField TextColor 0 36 139 255
+ForEach CutsceneTitles From: 3 To: 5 SetField TextColor 0 255 132 0
+ForEach CutsceneTitles SetField ShadowColor 0 26 26 26
+ForEach CutsceneTitles SetField FadeInTime 0.25
+ForEach CutsceneTitles SetField Uptime 5
+ForEach CutsceneTitles SetField FadeOutTime 0.25

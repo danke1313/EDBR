@@ -1,0 +1,267 @@
+OpenCacheFile "odstmaps\h100.map"
+
+IgnoreBlamTag ui\chud\odst_recon.chud_definition
+
+PortTag objects\vehicles\odst_pod\odst_pod.vehicle
+PortTag objects\vehicles\odst_pod\fx\door_breach.effect
+
+Exit
+
+EditTag objects\vehicles\odst_pod\shaders\poddoor_main01.shader
+SetArgument specular_tint 0.25 0.25 0.25 1
+SetArgument fresnel_color 0.25 0.25 0.25 1
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\odst_pod\shaders\poddoor_main02.shader
+SetArgument specular_tint 0.25 0.25 0.25 1
+SetArgument fresnel_color 0.25 0.25 0.25 1
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\odst_pod\shaders\poddoor_screens01.shader
+SetArgument analytical_specular_contribution 1
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\odst_pod\odst_pod_door_low\shaders\poddoor_main01.shader
+SetArgument specular_tint 0.25 0.25 0.25 1
+SetArgument fresnel_color 0.25 0.25 0.25 1
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\odst_pod\odst_pod_door_low\shaders\poddoor_screens01.shader
+SetArgument analytical_specular_contribution 1
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\odst_pod\odst_pod.render_model
+# Hand and feet IK markers
+SetField MarkerGroups[15].Markers[0].Translation 0.295 0.07025396 0.4189287
+
+SetField MarkerGroups[16].Markers[0].Translation 0.2175 0.125 0.765
+SetField MarkerGroups[16].Markers[0].Rotation -0.0434534 0.08707279 0.00380168 0.9952466
+
+SetField MarkerGroups[17].Markers[0].Translation 0.295 -0.05943744 0.4189287
+
+SetField MarkerGroups[18].Markers[0].Translation 0.2275 -0.11 0.76
+SetField MarkerGroups[18].Markers[0].Rotation 0.04355961 0.05228614 -0.002282862 0.9976791
+
+CopyBlockElements MarkerGroups 18 1
+PasteBlockElements MarkerGroups
+SetField MarkerGroups[*].Name right_hand_elite
+SetField MarkerGroups[*].Markers[0].Translation 0.2115 -0.112 0.76
+
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\odst_pod\odst_pod.physics_model
+
+ForEach Boxes SetField ProxyCollisionGroup 2
+ForEach Polyhedra SetField ProxyCollisionGroup 2
+
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\odst_pod\odst_pod.model
+
+# Flap
+SetField Variants[0].Regions[1].Permutations[0].Name null
+SetField Variants[0].Regions[1].Permutations[0].RenderModelPermutationIndex -1
+ 
+# Outside door
+SetField Variants[0].Regions[2].Permutations[0].Name off
+SetField Variants[0].Regions[2].Permutations[0].RenderModelPermutationIndex 2
+
+# Training door
+SetField Variants[0].Regions[5].Permutations[0].Name base
+SetField Variants[0].Regions[5].Permutations[0].RenderModelPermutationIndex 0
+AddBlockElements Variants[0].Regions[5].Permutations[0].States
+SetField Variants[0].Regions[5].Permutations[0].States[0].Name off
+SetField Variants[0].Regions[5].Permutations[0].States[0].ModelPermutationIndex 1
+SetField Variants[0].Regions[5].Permutations[0].States[0].State2 MinorDamage
+
+# Right hatch
+AddBlockElements Variants[0].Regions[3].Permutations[0].States
+SetField Variants[0].Regions[3].Permutations[0].States[0].Name open
+SetField Variants[0].Regions[3].Permutations[0].States[0].ModelPermutationIndex 2
+SetField Variants[0].Regions[3].Permutations[0].States[0].State2 MinorDamage
+ 
+# Left hatch
+AddBlockElements Variants[0].Regions[4].Permutations[0].States
+SetField Variants[0].Regions[4].Permutations[0].States[0].Name open
+SetField Variants[0].Regions[4].Permutations[0].States[0].ModelPermutationIndex 2
+SetField Variants[0].Regions[4].Permutations[0].States[0].State2 MinorDamage
+
+# Damage
+AddBlockElements NewDamageInfo
+SetField NewDamageInfo[0].Flags CannotDieFromDamage
+SetField NewDamageInfo[0].GlobalIndirectMaterialName hard_metal_thin_hum
+SetField NewDamageInfo[0].IndirectDamageSection 1
+SetField NewDamageInfo[0].CollisionDamageReportingType.Eldorado GenericCollision
+SetField NewDamageInfo[0].ResponseDamageReportingType.Eldorado GenericCollision
+SetField NewDamageInfo[0].MaximumVitality 1
+SetField NewDamageInfo[0].RechargeFraction 1
+SetField NewDamageInfo[0].GlobalShieldMaterialIndex -1
+SetField NewDamageInfo[0].GlobalIndirectMaterialIndex -1
+SetField NewDamageInfo[0].RuntimeShieldRechargeVelocity 1000
+AddBlockElements NewDamageInfo[0].Nodes 12
+ForEach NewDamageInfo[0].Nodes SetField RuntimeDamagePart -1
+
+# Pod absorber
+AddBlockElements NewDamageInfo[0].DamageSections
+SetField NewDamageInfo[0].DamageSections[*].Name pod
+SetField NewDamageInfo[0].DamageSections[*].Flags AbsorbsBodyDamage,IgnoresShields
+SetField NewDamageInfo[0].DamageSections[*].ResurrectionRegionRuntimeIndex -1
+
+# Training door
+AddBlockElements NewDamageInfo[0].DamageSections
+SetField NewDamageInfo[0].DamageSections[*].Name lookt
+SetField NewDamageInfo[0].DamageSections[*].VitalityPercentage 1
+SetField NewDamageInfo[0].DamageSections[*].ResurrectionRegionRuntimeIndex -1
+AddBlockElements NewDamageInfo[0].DamageSections[*].InstantResponses
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].DamageThreshold 0.9
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].Region lookt
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].NewState MinorDamage
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].RuntimeRegionIndex 3
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].SecondaryRuntimeRegionIndex -1
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].DestroyInstanceGroup -1
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].ResponseDelay 4
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].DelayEffect objects\vehicles\odst_pod\fx\door_breach.effect
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].DelayEffectMarkerName fx_door_crate
+
+# Right hatch
+AddBlockElements NewDamageInfo[0].DamageSections[*].InstantResponses
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].DamageThreshold 0.9
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].Region right
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].NewState MinorDamage
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].RuntimeRegionIndex 5
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].SecondaryRuntimeRegionIndex -1
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].DestroyInstanceGroup -1
+
+# Left hatch
+AddBlockElements NewDamageInfo[0].DamageSections[*].InstantResponses
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].DamageThreshold 0.9
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].Region left
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].NewState MinorDamage
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].RuntimeRegionIndex 2
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].SecondaryRuntimeRegionIndex -1
+SetField NewDamageInfo[0].DamageSections[*].InstantResponses[*].DestroyInstanceGroup -1
+
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\odst_pod\odst_pod.vehicle
+
+SetField DefaultModelVariant default
+
+SaveTagChanges
+Exit
+
+EditTag objects\characters\masterchief\masterchief.model_animation_graph
+
+# Copy hornet_d idle
+CopyBlockElements Animations 719 1
+PasteBlockElements Animations
+StringId Add pod_d:any:enter
+SetField Animations[*].Name pod_d:any:enter
+SetField Animations[*].AnimationData.FrameCount 0
+RemoveBlockElements Animations[*].AnimationData.SoundEvents 0 *
+
+# Copy hornet mode
+CopyBlockElements Modes 24 1
+PasteBlockElements Modes
+
+SetField Modes[*].Name pod_d
+
+# Our "new" animation and mauler_p_r exit
+RemoveBlockElements Modes[*].WeaponClass[0].WeaponType[0].Set.Actions 3 2
+SetField Modes[*].WeaponClass[0].WeaponType[0].Set.Actions[1].Animation 1245
+SetField Modes[*].WeaponClass[0].WeaponType[0].Set.Actions[2].Animation 877
+
+SetField Modes[*].ModeIk[0].AttachToMarker pod_d_left_hand_marine
+SetField Modes[*].ModeIk[1].AttachToMarker pod_d_right_hand_marine
+
+AddBlockElements Modes[*].ModeIk
+SetField Modes[*].ModeIk[*].Marker left_foot
+SetField Modes[*].ModeIk[*].AttachToMarker pod_d_left_foot_marine
+AddBlockElements Modes[*].ModeIk
+SetField Modes[*].ModeIk[*].Marker right_foot
+SetField Modes[*].ModeIk[*].AttachToMarker pod_d_right_foot_marine
+
+SaveTagChanges
+Exit
+
+EditTag objects\characters\elite\elite.model_animation_graph
+
+# Copy hornet_d idle
+CopyBlockElements Animations 1056 1
+PasteBlockElements Animations
+SetField Animations[*].Name pod_d:any:enter
+SetField Animations[*].AnimationData.FrameCount 0
+RemoveBlockElements Animations[*].AnimationData.SoundEvents 0 *
+
+SaveTagChanges
+Exit
+
+EditTag objects\characters\dervish\dervish.model_animation_graph
+
+# Copy hornet mode
+CopyBlockElements Modes 51 1
+PasteBlockElements Modes
+
+SetField Modes[*].Name pod_d
+
+# Our "new" animation and mauler_p_r exit
+RemoveBlockElements Modes[*].WeaponClass[0].WeaponType[0].Set.Actions 3 2
+SetField Modes[*].WeaponClass[0].WeaponType[0].Set.Actions[1].Animation 1599
+SetField Modes[*].WeaponClass[0].WeaponType[0].Set.Actions[2].Animation 1191
+
+SetField Modes[*].ModeIk[0].AttachToMarker pod_d_left_hand_marine
+SetField Modes[*].ModeIk[1].AttachToMarker right_hand_elite
+
+AddBlockElements Modes[*].ModeIk
+SetField Modes[*].ModeIk[*].Marker left_foot
+SetField Modes[*].ModeIk[*].AttachToMarker pod_d_left_foot_marine
+AddBlockElements Modes[*].ModeIk
+SetField Modes[*].ModeIk[*].Marker right_foot
+SetField Modes[*].ModeIk[*].AttachToMarker pod_d_right_foot_marine
+
+SaveTagChanges
+Exit
+
+EditTag objects\vehicles\odst_pod\fx\door_breach.effect
+
+SetField Priority Essential
+
+SetField Locations[0].Priority Essential
+SetField Locations[1].Priority Essential
+SetField Locations[2].Priority Essential
+SetField Locations[3].Priority Essential
+
+SetField Events[0].Priority Essential
+SetField Events[0].Parts[0].Priority Essential
+SetField Events[0].ParticleSystems[0].Priority Essential
+
+SetField Events[1].Priority Essential
+SetField Events[1].Parts[0].Priority Essential
+SetField Events[1].Parts[1].Priority Essential
+SetField Events[1].Parts[2].Priority Essential
+SetField Events[1].ParticleSystems[0].Priority Essential
+SetField Events[1].ParticleSystems[1].Priority Essential
+SetField Events[1].ParticleSystems[2].Priority Essential
+SetField Events[1].ParticleSystems[3].Priority Essential
+
+SetField Events[2].Priority Essential
+SetField Events[2].Parts[0].Priority Essential
+
+SaveTagChanges
+Exit
+
+edittag multiplayer\forge_globals.forge_globals_definition
+copyblockelements Palette 0 1
+pasteblockelements Palette
+setfield Palette[*].Name "POD"
+setfield Palette[*].Object objects\vehicles\odst_pod\odst_pod.vehicle
+SaveTagChanges
+Exit
