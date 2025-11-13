@@ -2,10 +2,10 @@
 D:\eldewrito\eldewrito 0.7\ElDewrito\maps
 
 # echo ==Set Variables...==
-SetVariable workingdir ""
-SetVariable modsfolder ""
-SetVariable odstmaps ""
-SetVariable reachmaps ""
+SetVariable workingdir "C:\Users\Matthew\Documents\GitHub\EDBR"
+SetVariable modsfolder "D:\eldewrito\eldewrito 0.7\ElDewrito\mods"
+SetVariable odstmaps "E:\Halo Resources\Halo3odst"
+SetVariable reachmaps "E:\Halo Resources\HaloReach"
 
 // Update at the end of the script
 CreateModPackage 1 Large

@@ -98,8 +98,8 @@ AddBlockElements NewDamageInfo
 SetField NewDamageInfo[0].Flags CannotDieFromDamage
 SetField NewDamageInfo[0].GlobalIndirectMaterialName hard_metal_thin_hum
 SetField NewDamageInfo[0].IndirectDamageSection 1
-SetField NewDamageInfo[0].CollisionDamageReportingType.Eldorado GenericCollision
-SetField NewDamageInfo[0].ResponseDamageReportingType.Eldorado GenericCollision
+SetField NewDamageInfo[0].CollisionDamageReportingType.HaloOnline GenericCollision
+SetField NewDamageInfo[0].ResponseDamageReportingType.HaloOnline GenericCollision
 SetField NewDamageInfo[0].MaximumVitality 1
 SetField NewDamageInfo[0].RechargeFraction 1
 SetField NewDamageInfo[0].GlobalShieldMaterialIndex -1
