@@ -180,7 +180,7 @@ SetField Modes[*].Name pod_d
 
 # Our "new" animation and mauler_p_r exit
 RemoveBlockElements Modes[*].WeaponClass[0].WeaponType[0].Set.Actions 3 2
-SetField Modes[*].WeaponClass[0].WeaponType[0].Set.Actions[1].Animation 1245
+SetField Modes[*].WeaponClass[0].WeaponType[0].Set.Actions[1].Animation 1250
 SetField Modes[*].WeaponClass[0].WeaponType[0].Set.Actions[2].Animation 877
 
 SetField Modes[*].ModeIk[0].AttachToMarker pod_d_left_hand_marine
