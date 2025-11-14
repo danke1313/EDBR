@@ -182,17 +182,17 @@ exit
 ################################################################################
 
 edittag objects\characters\spartans\midnight_spartan.model_animation_graph
-setinheritance MCC objects\characters\masterchief\masterchief_inheritance.model_animation_graph TightenNodes
+setinheritance MCC objects\characters\masterchief\masterchief.model_animation_graph TightenNodes
 savetagchanges
 exit
 
 edittag d_flog_flag\objects\characters\h4_spartan\h4_spartan.model_animation_graph
-setinheritance MCC objects\characters\masterchief\masterchief_inheritance.model_animation_graph TightenNodes
+setinheritance MCC objects\characters\masterchief\masterchief.model_animation_graph TightenNodes
 savetagchanges
 exit
 
 edittag objects\characters\masterchief\ms23_mp_masterchief\ms23_mp_masterchief.model_animation_graph
-setinheritance MCC objects\characters\masterchief\masterchief_inheritance.model_animation_graph TightenNodes
+setinheritance MCC objects\characters\masterchief\masterchief.model_animation_graph TightenNodes
 savetagchanges
 exit
 
