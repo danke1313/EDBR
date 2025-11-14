@@ -6,12 +6,12 @@ Exit
 
 DuplicateTag fx\podium\ui_player_appear.sound battle_royale\ui\losing
 EditTag battle_royale\ui\losing.sound
-ImportSound "working_directory\sounds\losing.mp3"
+ImportSound "workingdir\sounds\losing.mp3"
 SaveTagChanges
 Exit
 
 DuplicateTag fx\podium\ui_player_appear.sound battle_royale\ui\tie
 EditTag battle_royale\ui\tie.sound
-ImportSound "working_directory\sounds\tie.mp3"
+ImportSound "workingdir\sounds\tie.mp3"
 SaveTagChanges
 Exit
