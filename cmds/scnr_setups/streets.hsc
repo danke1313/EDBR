@@ -656,7 +656,7 @@
 						(begin
 							(set round_toggle true)
 							(cinematic_set_title event_loser)
-							(sound_impulse_start "battle_royale\ui\losing" "none" 1)
+							(sound_impulse_start "battle_royale\ui\losing" "none" 2)
 							(get_surviving_player)
 							(sleep 30)
 							(effect_new_on_object_marker "objects\characters\grunt\fx\grunt_birthday_party" (player_get_by_idx surviving_player) "head")
