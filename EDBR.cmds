@@ -178,6 +178,24 @@ SetField RevivingEquipment[0].Instance objects\powerups\health_pack\health_pack_
 savetagchanges
 exit
 
+// Forge Pallette
+RunCommands workingdir\cmds\ForgePalette.cmds
+
+###
+### Rename This
+###
+RunCommands "workingdir\cmds\drop_pod.cmds"
+RunCommands "workingdir\cmds\supply_capsule.cmds"
+RunCommands "workingdir\cmds\sounds.cmds"
+RunCommands "workingdir\cmds\barrier.cmds"
+RunCommands "workingdir\cmds\scnr_setups\scenarios.cmds"
+
+#echo set circle shader
+EditTag objects\battle_royale\barrier_standard_visual.render_model
+SetField Materials[0].RenderMethod objects\battle_royale\barrier_shader.shader_halogram
+savetagchanges
+exit
+
 ################################################################################
 		// Inherit Animations
 ################################################################################
@@ -196,19 +214,6 @@ edittag objects\characters\masterchief\ms23_mp_masterchief\ms23_mp_masterchief.m
 setinheritance MCC objects\characters\masterchief\masterchief.model_animation_graph TightenNodes
 savetagchanges
 exit
-
-
-// Forge Pallette
-RunCommands workingdir\cmds\ForgePalette.cmds
-
-###
-### Rename This
-###
-RunCommands "workingdir\cmds\drop_pod.cmds"
-RunCommands "workingdir\cmds\supply_capsule.cmds"
-RunCommands "workingdir\cmds\sounds.cmds"
-RunCommands "workingdir\cmds\barrier.cmds"
-RunCommands "workingdir\cmds\scnr_setups\scenarios.cmds"
 
 echo ==MORE REFORGE BLOCK==
 RunCommands "workingdir\cmds\extra_reforge_0.1.cmds"
