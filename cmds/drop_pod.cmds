@@ -205,7 +205,7 @@ Exit
 DuplicateTag camera\dropship_d_camera.camera_track camera\pod_d_camera
 EditTag camera\pod_d_camera.camera_track
 
-CS < "working_directory\commands\camera_track_offset.cs" -2
+CS < "workingdir\cmds\camera_track_offset.cs" -2
 
 SaveTagChanges
 Exit
