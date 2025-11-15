@@ -26,7 +26,7 @@ SetField Materials[0].MaterialName energy
 SetField Materials[0].GlobalMaterialIndex 144
 SetField Nodes[0].Name root
 SetField ModelObjectData[0].Offset 0 0 0
-SetField ModelObjectData[0].Radius 200
+SetField ModelObjectData[0].Radius 1000
 SaveTagChanges
 Exit
 
@@ -35,7 +35,7 @@ EditTag objects\battle_royale\barrier_standard.biped
 
 SetField ObjectType.Halo3ODST Biped
 SetField ObjectFlags.Flags DoesNotCastShadow,NotAPathfindingObstacle
-SetField BoundingRadius 200
+SetField BoundingRadius 1000
 SetField Model objects\battle_royale\barrier_standard.model
 
 SetField PhysicsControlNodeIndex -1
